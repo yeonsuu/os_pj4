@@ -1,0 +1,31 @@
+Writing command line to /tmp/sqFEzazuyD.dsk...
+qemu -hda /tmp/sqFEzazuyD.dsk -hdb tmp.dsk -hdc /tmp/zoLdHVmF7d.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q run 'tar fs.tar /' get fs.tar
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+374 pages available in user pool.
+Calibrating timer...  78,131,200 loops/s.
+hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Boot complete.
+Executing 'tar fs.tar /':
+fs.tar: create failed
+tar: exit(1)
+Execution of 'tar fs.tar /' complete.
+Getting 'fs.tar' from the file system...
+Kernel PANIC at ../../filesys/fsutil.c:167 in fsutil_get(): fs.tar: open failed
+Call stack: 0xc0107276 0xc010d1c2 0xc0100681 0xc01000cd.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 55 ticks
+Thread: 0 idle ticks, 52 kernel ticks, 3 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 92 reads, 4 writes
+hd1:0: 0 reads, 0 writes
+Console: 1040 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
+Copying tests/filesys/extended/dir-rm-tree.tar out of /tmp/zoLdHVmF7d.dsk...

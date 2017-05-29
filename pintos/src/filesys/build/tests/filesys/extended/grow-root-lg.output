@@ -1,0 +1,45 @@
+Copying tests/filesys/extended/grow-root-lg into /tmp/kaGK8H5gTf.dsk...
+Copying tests/filesys/extended/tar into /tmp/kaGK8H5gTf.dsk...
+Writing command line to /tmp/IN7ckCLekA.dsk...
+qemu -hda /tmp/IN7ckCLekA.dsk -hdb tmp.dsk -hdc /tmp/kaGK8H5gTf.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-root-lg put tar run grow-root-lg
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+374 pages available in user pool.
+Calibrating timer...  25,318,400 loops/s.
+hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'grow-root-lg' into the file system...
+Putting 'tar' into the file system...
+Executing 'grow-root-lg':
+(grow-root-lg) begin
+(grow-root-lg) creating and checking "file0"
+(grow-root-lg) creating and checking "file1"
+(grow-root-lg) creating and checking "file2"
+(grow-root-lg) creating and checking "file3"
+(grow-root-lg) creating and checking "file4"
+(grow-root-lg) creating and checking "file5"
+(grow-root-lg) creating and checking "file6"
+(grow-root-lg) creating and checking "file7"
+(grow-root-lg) creating and checking "file8"
+(grow-root-lg) creating and checking "file9"
+(grow-root-lg) creating and checking "file10"
+(grow-root-lg) creating and checking "file11"
+(grow-root-lg) creating and checking "file12"
+(grow-root-lg) creating and checking "file13"
+(grow-root-lg) creating and checking "file14"
+(grow-root-lg) create "file14": FAILED
+grow-root-lg: exit(1)
+Execution of 'grow-root-lg' complete.
+Timer: 71 ticks
+Thread: 0 idle ticks, 63 kernel ticks, 8 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 874 reads, 419 writes
+hd1:0: 160 reads, 0 writes
+Console: 1567 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

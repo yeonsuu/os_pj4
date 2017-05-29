@@ -1,0 +1,27 @@
+Copying tests/userprog/sc-bad-arg into /tmp/99xAGEHFPo.dsk...
+Writing command line to /tmp/IopD9Fo7bl.dsk...
+qemu -hda /tmp/IopD9Fo7bl.dsk -hdb /tmp/wrKER7Aukk.dsk -hdc /tmp/99xAGEHFPo.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put sc-bad-arg run sc-bad-arg
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+374 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'sc-bad-arg' into the file system...
+Executing 'sc-bad-arg':
+(sc-bad-arg) begin
+sc-bad-arg: exit(-1)
+Execution of 'sc-bad-arg' complete.
+Timer: 61 ticks
+Thread: 0 idle ticks, 60 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 61 reads, 154 writes
+hd1:0: 73 reads, 0 writes
+Console: 786 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

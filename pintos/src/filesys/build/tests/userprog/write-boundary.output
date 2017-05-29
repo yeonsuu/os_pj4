@@ -1,0 +1,31 @@
+Copying tests/userprog/write-boundary into /tmp/g8CS7v7eFf.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/g8CS7v7eFf.dsk...
+Writing command line to /tmp/UsYc3rMX3z.dsk...
+qemu -hda /tmp/UsYc3rMX3z.dsk -hdb /tmp/RnxrpXxLz2.dsk -hdc /tmp/g8CS7v7eFf.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put write-boundary put sample.txt run write-boundary
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+374 pages available in user pool.
+Calibrating timer...  26,188,800 loops/s.
+hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 78 sector (39 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'write-boundary' into the file system...
+Putting 'sample.txt' into the file system...
+Executing 'write-boundary':
+(write-boundary) begin
+(write-boundary) open "sample.txt"
+(write-boundary) end
+write-boundary: exit(0)
+Execution of 'write-boundary' complete.
+Timer: 55 ticks
+Thread: 0 idle ticks, 54 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 100 reads, 167 writes
+hd1:0: 78 reads, 0 writes
+Console: 930 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

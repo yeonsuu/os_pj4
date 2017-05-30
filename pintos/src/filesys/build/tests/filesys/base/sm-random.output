@@ -1,12 +1,12 @@
-Copying tests/filesys/base/sm-random into /tmp/Aa0hYF7Yhp.dsk...
-Writing command line to /tmp/mkLiJLFXuv.dsk...
-qemu -hda /tmp/mkLiJLFXuv.dsk -hdb /tmp/oW6gIX8Jtg.dsk -hdc /tmp/Aa0hYF7Yhp.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/base/sm-random into /tmp/3JSxnI35P4.dsk...
+Writing command line to /tmp/kA5mcIAkfF.dsk...
+qemu -hda /tmp/kA5mcIAkfF.dsk -hdb /tmp/CrE2FEGdcF.dsk -hdc /tmp/3JSxnI35P4.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put sm-random run sm-random
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  62,156,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  78,438,400 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 78 sector (39 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -22,10 +22,10 @@ Executing 'sm-random':
 (sm-random) end
 sm-random: exit(0)
 Execution of 'sm-random' complete.
-Timer: 66 ticks
-Thread: 0 idle ticks, 60 kernel ticks, 6 user ticks
+Timer: 64 ticks
+Thread: 0 idle ticks, 62 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 341 reads, 298 writes
+hd0:1: 122 reads, 134 writes
 hd1:0: 78 reads, 0 writes
 Console: 961 characters output
 Keyboard: 0 keys pressed

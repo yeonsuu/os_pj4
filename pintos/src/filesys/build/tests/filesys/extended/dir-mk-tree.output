@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/dir-mk-tree into /tmp/I43Lc9dxSS.dsk...
-Copying tests/filesys/extended/tar into /tmp/I43Lc9dxSS.dsk...
-Writing command line to /tmp/s9hh71YKGa.dsk...
-qemu -hda /tmp/s9hh71YKGa.dsk -hdb tmp.dsk -hdc /tmp/I43Lc9dxSS.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-mk-tree into /tmp/ZcIaE9jqtb.dsk...
+Copying tests/filesys/extended/tar into /tmp/ZcIaE9jqtb.dsk...
+Writing command line to /tmp/eUaXVvLhE2.dsk...
+qemu -hda /tmp/eUaXVvLhE2.dsk -hdb tmp.dsk -hdc /tmp/ZcIaE9jqtb.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-mk-tree put tar run dir-mk-tree
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  75,264,000 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 162 sector (81 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -20,10 +20,10 @@ Executing 'dir-mk-tree':
 (dir-mk-tree) create "/0/1/0/2": FAILED
 dir-mk-tree: exit(1)
 Execution of 'dir-mk-tree' complete.
-Timer: 71 ticks
-Thread: 0 idle ticks, 67 kernel ticks, 4 user ticks
+Timer: 68 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 539 reads, 394 writes
+hd0:1: 219 reads, 310 writes
 hd1:0: 162 reads, 0 writes
 Console: 933 characters output
 Keyboard: 0 keys pressed

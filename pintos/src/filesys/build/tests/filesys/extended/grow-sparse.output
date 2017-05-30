@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/grow-sparse into /tmp/r2MNk1JXMI.dsk...
-Copying tests/filesys/extended/tar into /tmp/r2MNk1JXMI.dsk...
-Writing command line to /tmp/Dm5g5mSpDU.dsk...
-qemu -hda /tmp/Dm5g5mSpDU.dsk -hdb tmp.dsk -hdc /tmp/r2MNk1JXMI.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-sparse into /tmp/PCb3xCqQ2G.dsk...
+Copying tests/filesys/extended/tar into /tmp/PCb3xCqQ2G.dsk...
+Writing command line to /tmp/OdM8g7G47l.dsk...
+qemu -hda /tmp/OdM8g7G47l.dsk -hdb tmp.dsk -hdc /tmp/PCb3xCqQ2G.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-sparse put tar run grow-sparse
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
+373 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -23,10 +23,10 @@ Executing 'grow-sparse':
 (grow-sparse) write "testfile": FAILED
 grow-sparse: exit(1)
 Execution of 'grow-sparse' complete.
-Timer: 66 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
+Timer: 67 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 117 reads, 332 writes
+hd0:1: 204 reads, 290 writes
 hd1:0: 159 reads, 0 writes
 Console: 1003 characters output
 Keyboard: 0 keys pressed

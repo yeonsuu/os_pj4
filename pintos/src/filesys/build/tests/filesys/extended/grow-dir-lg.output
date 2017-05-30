@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/grow-dir-lg into /tmp/plDjldsXnd.dsk...
-Copying tests/filesys/extended/tar into /tmp/plDjldsXnd.dsk...
-Writing command line to /tmp/0S1JYg9C7U.dsk...
-qemu -hda /tmp/0S1JYg9C7U.dsk -hdb tmp.dsk -hdc /tmp/plDjldsXnd.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-dir-lg into /tmp/iGMkg9GcKJ.dsk...
+Copying tests/filesys/extended/tar into /tmp/iGMkg9GcKJ.dsk...
+Writing command line to /tmp/Qj9zkV2U4k.dsk...
+qemu -hda /tmp/Qj9zkV2U4k.dsk -hdb tmp.dsk -hdc /tmp/iGMkg9GcKJ.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-dir-lg put tar run grow-dir-lg
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  71,987,200 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -35,10 +35,10 @@ Executing 'grow-dir-lg':
 (grow-dir-lg) create "/x/file14": FAILED
 grow-dir-lg: exit(1)
 Execution of 'grow-dir-lg' complete.
-Timer: 71 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 8 user ticks
+Timer: 73 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 8 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 874 reads, 419 writes
+hd0:1: 287 reads, 335 writes
 hd1:0: 160 reads, 0 writes
 Console: 1615 characters output
 Keyboard: 0 keys pressed

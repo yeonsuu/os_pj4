@@ -96,6 +96,33 @@ syscall_handler (struct intr_frame *f)
       syscall_arguments(argv, sp, 1);
     	sys_close((int)*argv[0]);
     	break;
+
+      /*
+    case SYS_CHDIR :
+      syscall_arguments(argv, sp, 1);
+      f->eax = sys_chidr((const char *)*argv[0]);
+      break;
+
+    case SYS_MKDIR :
+      syscall_arguments(argv, sp, 1);
+      f->eax = sys_mkdir((const char *)*argv[0]);
+      break;
+
+    case SYS_READDIR :
+      syscall_arguments(argv, sp, 2);
+      f->eax = sys_readdir((int)*argv[0], (char name[READDIR_MAK_LEN +1])(uint32_t *)*argv[1]);
+      break;
+
+    case SYS_ISDIR :
+      syscall_arguments(argv, sp, 1);
+      f->eax = sys_isdir((int)*argv[0]);
+      break;
+
+    case SYS_INUMBER :
+      syscall_arguments(argv, sp, 1);
+      f->eax = sys_inumber((int)*argv[0]);
+      break;
+*/
   }
 }
 
@@ -343,3 +370,36 @@ sys_close(int fd)
   }
 }
 
+
+/*
+bool
+sys_chdir (const char *dir)
+{
+  return syscall1 (SYS_CHDIR, dir);
+}
+
+bool
+sys_mkdir (const char *dir)
+{
+  return syscall1 (SYS_MKDIR, dir);
+}
+
+bool
+sys_readdir (int fd, char name[READDIR_MAX_LEN + 1]) 
+{
+  return syscall2 (SYS_READDIR, fd, name);
+}
+
+bool
+sys_isdir (int fd) 
+{
+  return syscall1 (SYS_ISDIR, fd);
+}
+
+int
+sys_inumber (int fd) 
+{
+  return syscall1 (SYS_INUMBER, fd);
+}
+
+*/

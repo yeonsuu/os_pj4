@@ -9,7 +9,7 @@
 
 /* Identifies an inode. */
 #define INODE_MAGIC 0x494e4f44
-
+struct list cache_list;
 /* On-disk inode.
    Must be exactly DISK_SECTOR_SIZE bytes long. */
 struct inode_disk
@@ -62,6 +62,7 @@ void
 inode_init (void) 
 {
   list_init (&open_inodes);
+  list_init (&cache_list);
 }
 
 /* Initializes an inode with LENGTH bytes of data and
@@ -204,8 +205,25 @@ inode_read_at (struct inode *inode, void *buffer_, off_t size, off_t offset)
   off_t bytes_read = 0;
   uint8_t *bounce = NULL;
 
+  
   while (size > 0) 
     {
+      /* 
+      1. cache 에 있는지확인
+      2. HIT 그냥 그걸 읽음
+      3. MISS if(list_lenght >= 64 이면 FIFO로 evict
+      4. disk에서 fetch
+
+
+      WRITE-BEHIND
+      evict함수 안에 dirty bit가 있으면 evict 할때 disk에다가 수정내용을 입력 (mmap할때)
+
+      READ-AHEAD
+      하나 fetch할때 그 다음 block도 함께 fetch(읽혀질것 같으니까)
+      
+      */
+
+
       /* Disk sector to read, starting byte offset within sector. */
       disk_sector_t sector_idx = byte_to_sector (inode, offset);
       int sector_ofs = offset % DISK_SECTOR_SIZE;
@@ -217,27 +235,59 @@ inode_read_at (struct inode *inode, void *buffer_, off_t size, off_t offset)
 
       /* Number of bytes to actually copy out of this sector. */
       int chunk_size = size < min_left ? size : min_left;
-      if (chunk_size <= 0)
+      if (chunk_size <= 0){
         break;
+      }
 
+      struct cache_entry *c = is_hit(sector_idx);
+      struct cache_entry *next_c;
       if (sector_ofs == 0 && chunk_size == DISK_SECTOR_SIZE) 
-        {
-          /* Read full sector directly into caller's buffer. */
-          disk_read (filesys_disk, sector_idx, buffer + bytes_read); 
+      {
+        /* Read full sector directly into caller's buffer. */
+        if(c == NULL){
+          //FETCH, LIST 추가, MEMCPY
+          
+          c = new_entry();
+          //c = malloc(sizeof *c);
+          c -> sector_idx = sector_idx;
+          c -> data = malloc (DISK_SECTOR_SIZE);
+          ASSERT(c->data != NULL);
+  
+          disk_read (filesys_disk, sector_idx, c->data);
+
+          list_push_back(&cache_list, &c->elem);
+
+          next_c = new_entry();
+          next_c -> sector_idx = sector_idx+1;
+          next_c -> data = malloc (DISK_SECTOR_SIZE);
+          disk_read (filesys_disk, sector_idx+1, next_c->data);
+          list_push_back(&cache_list, &next_c->elem);
+
         }
+        
+        memcpy (buffer + bytes_read, c->data, chunk_size);
+        //disk_read (filesys_disk, sector_idx, buffer + bytes_read); 
+
+      }
       else 
-        {
-          /* Read sector into bounce buffer, then partially copy
-             into caller's buffer. */
-          if (bounce == NULL) 
-            {
-              bounce = malloc (DISK_SECTOR_SIZE);
-              if (bounce == NULL)
-                break;
-            }
-          disk_read (filesys_disk, sector_idx, bounce);
-          memcpy (buffer + bytes_read, bounce + sector_ofs, chunk_size);
+      {
+        if(c == NULL){
+          //FETCH, LIST 추가, MEMCPY
+          c = new_entry();
+          //c = malloc(sizeof *c);
+          c -> sector_idx = sector_idx;
+          c -> data = malloc (DISK_SECTOR_SIZE);
+          ASSERT(c->data != NULL);
+          disk_read (filesys_disk, sector_idx, c->data);
+          list_push_back(&cache_list, &c->elem);
+          next_c = new_entry();
+          next_c -> sector_idx = sector_idx+1;
+          next_c -> data = malloc (DISK_SECTOR_SIZE);
+          disk_read (filesys_disk, sector_idx+1, next_c->data);
+          list_push_back(&cache_list, &next_c->elem);
         }
+        memcpy (buffer + bytes_read, c->data + sector_ofs, chunk_size);
+      }
       
       /* Advance. */
       size -= chunk_size;
@@ -281,30 +331,57 @@ inode_write_at (struct inode *inode, const void *buffer_, off_t size,
       if (chunk_size <= 0)
         break;
 
+      struct cache_entry *c = is_hit(sector_idx);
+      struct cache_entry *next_c;
+
       if (sector_ofs == 0 && chunk_size == DISK_SECTOR_SIZE) 
         {
           /* Write full sector directly to disk. */
-          disk_write (filesys_disk, sector_idx, buffer + bytes_written); 
+          if(c == NULL){
+            //FETCH, LIST 추가, MEMCPY
+            c = new_entry();
+            //c = malloc(sizeof *c);
+            c -> sector_idx = sector_idx;
+            c -> data = malloc (DISK_SECTOR_SIZE);
+            ASSERT(c->data != NULL);
+            disk_read (filesys_disk, sector_idx, c->data);
+            list_push_back(&cache_list, &c->elem);
+            next_c = new_entry();
+          next_c -> sector_idx = sector_idx+1;
+          next_c -> data = malloc (DISK_SECTOR_SIZE);
+          disk_read (filesys_disk, sector_idx+1, next_c->data);
+          list_push_back(&cache_list, &next_c->elem);
+          }
+          memcpy (c->data, buffer + bytes_written, chunk_size); 
         }
       else 
         {
           /* We need a bounce buffer. */
-          if (bounce == NULL) 
-            {
-              bounce = malloc (DISK_SECTOR_SIZE);
-              if (bounce == NULL)
-                break;
-            }
-
+         
           /* If the sector contains data before or after the chunk
              we're writing, then we need to read in the sector
              first.  Otherwise we start with a sector of all zeros. */
-          if (sector_ofs > 0 || chunk_size < sector_left) 
-            disk_read (filesys_disk, sector_idx, bounce);
-          else
-            memset (bounce, 0, DISK_SECTOR_SIZE);
-          memcpy (bounce + sector_ofs, buffer + bytes_written, chunk_size);
-          disk_write (filesys_disk, sector_idx, bounce); 
+          if(c == NULL){
+            //FETCH, LIST 추가, MEMCPY
+            c = new_entry();
+           // c = malloc(sizeof *c);
+            c -> sector_idx = sector_idx;
+            c -> data = malloc (DISK_SECTOR_SIZE);
+            ASSERT(c->data != NULL);
+            if (sector_ofs > 0 || chunk_size < sector_left) 
+            disk_read (filesys_disk, sector_idx, c->data);
+            else
+            memset (c->data, 0, DISK_SECTOR_SIZE);
+            list_push_back(&cache_list, &c->elem);
+            next_c = new_entry();
+          next_c -> sector_idx = sector_idx+1;
+          next_c -> data = malloc (DISK_SECTOR_SIZE);
+          
+          disk_read (filesys_disk, sector_idx+1, next_c->data);
+          list_push_back(&cache_list, &next_c->elem);
+          }
+
+          memcpy (c->data + sector_ofs, buffer + bytes_written, chunk_size);
         }
 
       /* Advance. */
@@ -342,4 +419,35 @@ off_t
 inode_length (const struct inode *inode)
 {
   return inode->data.length;
+}
+
+
+struct cache_entry *
+is_hit(disk_sector_t sector_idx){
+  struct list_elem *e;
+  struct cache_entry *c;
+  for(e = list_begin(&cache_list); e!= list_end(&cache_list); e = list_next(e)){
+    c = list_entry (e, struct cache_entry, elem);
+    if(c->sector_idx == sector_idx){
+      return c;
+    }
+  }
+  return NULL;
+
+}
+
+struct cache_entry *
+new_entry(void){
+  struct cache_entry * c;
+  if(list_size(&cache_list) >= 64){
+    c = list_entry(list_pop_front(&cache_list), struct cache_entry, elem);
+    disk_write(filesys_disk, c->sector_idx, c->data);
+    //ASSERT(0);
+  }
+  else{
+    c = malloc(sizeof *c);
+  }
+
+  return c;
+
 }

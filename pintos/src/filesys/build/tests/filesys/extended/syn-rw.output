@@ -1,14 +1,14 @@
-Copying tests/filesys/extended/syn-rw into /tmp/qu0RmxDFtk.dsk...
-Copying tests/filesys/extended/tar into /tmp/qu0RmxDFtk.dsk...
-Copying tests/filesys/extended/child-syn-rw into /tmp/qu0RmxDFtk.dsk...
-Writing command line to /tmp/9J55bsIQwp.dsk...
-qemu -hda /tmp/9J55bsIQwp.dsk -hdb tmp.dsk -hdc /tmp/qu0RmxDFtk.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/syn-rw into /tmp/aY6pNeD4yD.dsk...
+Copying tests/filesys/extended/tar into /tmp/aY6pNeD4yD.dsk...
+Copying tests/filesys/extended/child-syn-rw into /tmp/aY6pNeD4yD.dsk...
+Writing command line to /tmp/SjVayVGIkc.dsk...
+qemu -hda /tmp/SjVayVGIkc.dsk -hdb tmp.dsk -hdc /tmp/aY6pNeD4yD.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put syn-rw put tar put child-syn-rw run syn-rw
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  51,968,000 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 244 sector (122 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -27,10 +27,10 @@ Executing 'syn-rw':
 (syn-rw) write 8 bytes at offset 0 in "logfile": FAILED
 syn-rw: exit(1)
 Execution of 'syn-rw' complete.
-Timer: 159 ticks
-Thread: 0 idle ticks, 69 kernel ticks, 90 user ticks
+Timer: 169 ticks
+Thread: 0 idle ticks, 74 kernel ticks, 95 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 321 reads, 504 writes
+hd0:1: 333 reads, 488 writes
 hd1:0: 244 reads, 0 writes
 Console: 1159 characters output
 Keyboard: 0 keys pressed

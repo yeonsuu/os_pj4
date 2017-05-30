@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/dir-vine into /tmp/AYdeG8cBzi.dsk...
-Copying tests/filesys/extended/tar into /tmp/AYdeG8cBzi.dsk...
-Writing command line to /tmp/ipf1Q1BObn.dsk...
-qemu -hda /tmp/ipf1Q1BObn.dsk -hdb tmp.dsk -hdc /tmp/AYdeG8cBzi.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-vine into /tmp/a502PtTazJ.dsk...
+Copying tests/filesys/extended/tar into /tmp/a502PtTazJ.dsk...
+Writing command line to /tmp/ykbKwvc7p3.dsk...
+qemu -hda /tmp/ykbKwvc7p3.dsk -hdb tmp.dsk -hdc /tmp/a502PtTazJ.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-vine put tar run dir-vine
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  52,172,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  65,228,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 163 sector (81 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -20,10 +20,10 @@ Executing 'dir-vine':
 (dir-vine) created files and directories only to level 0: FAILED
 dir-vine: exit(1)
 Execution of 'dir-vine' complete.
-Timer: 67 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 2 user ticks
+Timer: 70 ticks
+Thread: 0 idle ticks, 68 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 127 reads, 343 writes
+hd0:1: 211 reads, 300 writes
 hd1:0: 163 reads, 0 writes
 Console: 945 characters output
 Keyboard: 0 keys pressed

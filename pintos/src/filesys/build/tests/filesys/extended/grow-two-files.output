@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/grow-two-files into /tmp/o38zQ3lf96.dsk...
-Copying tests/filesys/extended/tar into /tmp/o38zQ3lf96.dsk...
-Writing command line to /tmp/BQW5I8xXos.dsk...
-qemu -hda /tmp/BQW5I8xXos.dsk -hdb tmp.dsk -hdc /tmp/o38zQ3lf96.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-two-files into /tmp/YXy0wJnLUC.dsk...
+Copying tests/filesys/extended/tar into /tmp/YXy0wJnLUC.dsk...
+Writing command line to /tmp/ufXCNwRN8o.dsk...
+qemu -hda /tmp/ufXCNwRN8o.dsk -hdb tmp.dsk -hdc /tmp/YXy0wJnLUC.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-two-files put tar run grow-two-files
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  75,264,000 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 161 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -24,10 +24,10 @@ Executing 'grow-two-files':
 (grow-two-files) write 250 bytes at offset 0 in "a" returned 0: FAILED
 grow-two-files: exit(1)
 Execution of 'grow-two-files' complete.
-Timer: 64 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
+Timer: 67 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 148 reads, 340 writes
+hd0:1: 209 reads, 295 writes
 hd1:0: 161 reads, 0 writes
 Console: 1088 characters output
 Keyboard: 0 keys pressed

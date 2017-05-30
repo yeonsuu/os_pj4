@@ -1,13 +1,13 @@
-Copying tests/filesys/extended/dir-rm-parent into /tmp/86r7AtLVSA.dsk...
-Copying tests/filesys/extended/tar into /tmp/86r7AtLVSA.dsk...
-Writing command line to /tmp/jdxfDWEVIv.dsk...
-qemu -hda /tmp/jdxfDWEVIv.dsk -hdb tmp.dsk -hdc /tmp/86r7AtLVSA.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-rm-parent into /tmp/l5yRAEgoxQ.dsk...
+Copying tests/filesys/extended/tar into /tmp/l5yRAEgoxQ.dsk...
+Writing command line to /tmp/YmXVg1p9Fd.dsk...
+qemu -hda /tmp/YmXVg1p9Fd.dsk -hdb tmp.dsk -hdc /tmp/l5yRAEgoxQ.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-parent put tar run dir-rm-parent
 Pintos booting with 4,096 kB RAM...
 374 pages available in kernel pool.
-374 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 137 sector (68 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+373 pages available in user pool.
+Calibrating timer...  52,428,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...done.
@@ -24,10 +24,10 @@ Executing 'dir-rm-parent':
 (dir-rm-parent) end
 dir-rm-parent: exit(0)
 Execution of 'dir-rm-parent' complete.
-Timer: 64 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
+Timer: 79 ticks
+Thread: 0 idle ticks, 77 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 106 reads, 328 writes
+hd0:1: 201 reads, 288 writes
 hd1:0: 159 reads, 0 writes
 Console: 1019 characters output
 Keyboard: 0 keys pressed

@@ -1,16 +1,17 @@
-Copying tests/filesys/extended/dir-rmdir into /tmp/AH8glONdXR.dsk...
-Copying tests/filesys/extended/tar into /tmp/AH8glONdXR.dsk...
-Writing command line to /tmp/1t9epLRIeG.dsk...
-qemu -hda /tmp/1t9epLRIeG.dsk -hdb tmp.dsk -hdc /tmp/AH8glONdXR.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/dir-rmdir into /tmp/0H29QF7iZ6.dsk...
+Copying tests/filesys/extended/tar into /tmp/0H29QF7iZ6.dsk...
+Writing command line to /tmp/Hbbmx0SdSL.dsk...
+qemu -hda /tmp/Hbbmx0SdSL.dsk -hdb tmp.dsk -hdc /tmp/0H29QF7iZ6.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rmdir put tar run dir-rmdir
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
-Formatting file system...done.
+Formatting file system...create
+done.
 Boot complete.
 Putting 'dir-rmdir' into the file system...
 Putting 'tar' into the file system...
@@ -21,12 +22,12 @@ Executing 'dir-rmdir':
 (dir-rmdir) rmdir "a": FAILED
 dir-rmdir: exit(1)
 Execution of 'dir-rmdir' complete.
-Timer: 64 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 2 user ticks
+Timer: 65 ticks
+Thread: 0 idle ticks, 64 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 201 reads, 288 writes
+hd0:1: 197 reads, 284 writes
 hd1:0: 159 reads, 0 writes
-Console: 901 characters output
+Console: 908 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

@@ -9,18 +9,16 @@
 struct bitmap;
 
 
+struct list cache_list;
 
 
 struct cache_entry{
-    struct list_elem elem;
-    //int sector_ofs;
-    disk_sector_t sector_idx;
-    uint8_t *data;
-    //write_behind에 필요한 정보
+	struct list_elem elem;
+	//int sector_ofs;
+	disk_sector_t sector_idx;
+	uint8_t *data;
+	//write_behind에 필요한 정보
 };
-
-
-
 
 
 
@@ -38,11 +36,13 @@ void inode_allow_write (struct inode *);
 off_t inode_length (const struct inode *);
 struct cache_entry * is_hit(disk_sector_t);
 struct cache_entry * new_entry(void);
-bool sector_allocate(size_t, struct inode_disk * );
-int min(int, int);
-void indirect_release(size_t , disk_sector_t );
 
-bool inode_indirect(size_t , disk_sector_t);
-bool inode_doubly(size_t, struct inode_disk *);
+void inode_direct(size_t, struct inode_disk *);
+void inode_indirect(size_t, disk_sector_t);
+void inode_indirect_close(size_t, disk_sector_t);
+void inode_doubly(size_t, disk_sector_t);
+void inode_doubly_close(size_t, disk_sector_t);
+int min(int , int );
+
 
 #endif /* filesys/inode.h */

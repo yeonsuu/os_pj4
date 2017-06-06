@@ -1,2 +1,1 @@
-FAIL
-run: 443 bytes read starting at offset 4608 in "bazzle" differ from expected: FAILED
+PASS

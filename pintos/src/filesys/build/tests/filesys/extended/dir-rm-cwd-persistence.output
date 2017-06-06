@@ -1,8 +1,8 @@
-Writing command line to /tmp/mtjljxbRZO.dsk...
-qemu -hda /tmp/mtjljxbRZO.dsk -hdb tmp.dsk -hdc /tmp/6Si8KJw2Xp.dsk -m 4 -net none -nographic -monitor null
+Writing command line to /tmp/8CtLuTqu70.dsk...
+qemu -hda /tmp/8CtLuTqu70.dsk -hdb tmp.dsk -hdc /tmp/VVDb918NvT.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
@@ -15,8 +15,8 @@ error writing archive
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
-Timer: 54 ticks
-Thread: 0 idle ticks, 53 kernel ticks, 1 user ticks
+Timer: 53 ticks
+Thread: 0 idle ticks, 52 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 38 reads, 1 writes
 hd1:0: 0 reads, 1 writes
@@ -24,4 +24,4 @@ Console: 764 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
-Copying tests/filesys/extended/dir-rm-cwd.tar out of /tmp/6Si8KJw2Xp.dsk...
+Copying tests/filesys/extended/dir-rm-cwd.tar out of /tmp/VVDb918NvT.dsk...

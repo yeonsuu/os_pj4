@@ -1,16 +1,17 @@
-Copying tests/filesys/extended/grow-root-lg into /tmp/pPS3V0foii.dsk...
-Copying tests/filesys/extended/tar into /tmp/pPS3V0foii.dsk...
-Writing command line to /tmp/aslDuYXa2H.dsk...
-qemu -hda /tmp/aslDuYXa2H.dsk -hdb tmp.dsk -hdc /tmp/pPS3V0foii.dsk -m 4 -net none -nographic -monitor null
+Copying tests/filesys/extended/grow-root-lg into /tmp/UIPqwpIjhm.dsk...
+Copying tests/filesys/extended/tar into /tmp/UIPqwpIjhm.dsk...
+Writing command line to /tmp/gHyFMkPrIO.dsk...
+qemu -hda /tmp/gHyFMkPrIO.dsk -hdb tmp.dsk -hdc /tmp/UIPqwpIjhm.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-root-lg put tar run grow-root-lg
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
+Calibrating timer...  65,228,800 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
-Formatting file system...done.
+Formatting file system...create
+done.
 Boot complete.
 Putting 'grow-root-lg' into the file system...
 Putting 'tar' into the file system...
@@ -34,12 +35,12 @@ Executing 'grow-root-lg':
 (grow-root-lg) create "file14": FAILED
 grow-root-lg: exit(1)
 Execution of 'grow-root-lg' complete.
-Timer: 68 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 6 user ticks
+Timer: 75 ticks
+Thread: 0 idle ticks, 70 kernel ticks, 5 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 287 reads, 335 writes
+hd0:1: 283 reads, 331 writes
 hd1:0: 160 reads, 0 writes
-Console: 1567 characters output
+Console: 1574 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

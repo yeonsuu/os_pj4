@@ -1,10 +1,10 @@
-Writing command line to /tmp/DGSY1KnVrS.dsk...
-qemu -hda /tmp/DGSY1KnVrS.dsk -hdb tmp.dsk -hdc /tmp/Lys5T252WN.dsk -m 4 -net none -nographic -monitor null
+Writing command line to /tmp/I9Llb4XxUX.dsk...
+qemu -hda /tmp/I9Llb4XxUX.dsk -hdb tmp.dsk -hdc /tmp/r4H69JnVIO.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
-Calibrating timer...  52,428,800 loops/s.
+Calibrating timer...  71,577,600 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -15,8 +15,8 @@ error writing archive
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
-Timer: 69 ticks
-Thread: 0 idle ticks, 66 kernel ticks, 3 user ticks
+Timer: 59 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 38 reads, 1 writes
 hd1:0: 0 reads, 1 writes
@@ -24,4 +24,4 @@ Console: 764 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
-Copying tests/filesys/extended/dir-rm-parent.tar out of /tmp/Lys5T252WN.dsk...
+Copying tests/filesys/extended/dir-rm-parent.tar out of /tmp/r4H69JnVIO.dsk...

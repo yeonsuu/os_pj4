@@ -1,8 +1,8 @@
-Writing command line to /tmp/dwvz79u58V.dsk...
-qemu -hda /tmp/dwvz79u58V.dsk -hdb tmp.dsk -hdc /tmp/6Xn3TADPMc.dsk -m 4 -net none -nographic -monitor null
+Writing command line to /tmp/GHDwVdU2WN.dsk...
+qemu -hda /tmp/GHDwVdU2WN.dsk -hdb tmp.dsk -hdc /tmp/IuSn1i5Ixu.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
@@ -16,7 +16,7 @@ tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
 Timer: 55 ticks
-Thread: 0 idle ticks, 54 kernel ticks, 1 user ticks
+Thread: 0 idle ticks, 53 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 38 reads, 1 writes
 hd1:0: 0 reads, 1 writes
@@ -24,4 +24,4 @@ Console: 764 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
-Copying tests/filesys/extended/grow-sparse.tar out of /tmp/6Xn3TADPMc.dsk...
+Copying tests/filesys/extended/grow-sparse.tar out of /tmp/IuSn1i5Ixu.dsk...

@@ -36,6 +36,16 @@ filesys_init (bool format)
 void
 filesys_done (void) 
 {
+  /*
+  struct list_elem *e;
+  struct cache_entry *c;
+  while(!list_empty(&cache_list)){
+    c = list_entry(list_pop_front(&cache_list), struct cache_entry, elem);
+    disk_write(filesys_disk, c->sector_idx, c->data);
+    free(c);
+  }
+  */
+
   free_map_close ();
 }
 

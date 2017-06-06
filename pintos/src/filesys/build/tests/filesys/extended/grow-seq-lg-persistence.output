@@ -1,10 +1,10 @@
-Writing command line to /tmp/T1R7LAocZq.dsk...
-qemu -hda /tmp/T1R7LAocZq.dsk -hdb tmp.dsk -hdc /tmp/edAw3tNJI4.dsk -m 4 -net none -nographic -monitor null
+Writing command line to /tmp/QinwETq9ro.dsk...
+qemu -hda /tmp/QinwETq9ro.dsk -hdb tmp.dsk -hdc /tmp/vKjB2cO9Xa.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
-374 pages available in kernel pool.
+373 pages available in kernel pool.
 373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
+Calibrating timer...  52,377,600 loops/s.
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -15,8 +15,8 @@ error writing archive
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
-Timer: 58 ticks
-Thread: 0 idle ticks, 56 kernel ticks, 2 user ticks
+Timer: 51 ticks
+Thread: 0 idle ticks, 50 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 38 reads, 1 writes
 hd1:0: 0 reads, 1 writes
@@ -24,4 +24,4 @@ Console: 764 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
-Copying tests/filesys/extended/grow-seq-lg.tar out of /tmp/edAw3tNJI4.dsk...
+Copying tests/filesys/extended/grow-seq-lg.tar out of /tmp/vKjB2cO9Xa.dsk...

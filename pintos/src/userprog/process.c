@@ -298,6 +298,7 @@ process_exit (void)
     parent_p = find_process(curr_p->parent_pid);
 
     curr_p -> is_dead = true;
+    //ASSERT(curr_p->exit_status != -1);
     printf("%s: exit(%d)\n", thread_name(), curr_p->exit_status);
 
     //CASE 0: NO Parent
@@ -504,6 +505,8 @@ load (const char *file_name, void (**eip) (void), void **esp)
       || ehdr.e_phentsize != sizeof (struct Elf32_Phdr)
       || ehdr.e_phnum > 1024) 
     {
+      printf("0. %d,1. %d, 2. %d, 3. %d, 4. %d, 5. %d, 6. %d\n", file_read (file, &ehdr, sizeof ehdr) != sizeof ehdr,memcmp (ehdr.e_ident, "\177ELF\1\1\1", 7) ,ehdr.e_type != 2,ehdr.e_machine != 3,
+       ehdr.e_version != 1, ehdr.e_phentsize != sizeof (struct Elf32_Phdr), ehdr.e_phnum > 1024);
       printf ("load: %s: error loading executable\n", file_name);
       goto done; 
     }
@@ -514,12 +517,15 @@ load (const char *file_name, void (**eip) (void), void **esp)
     {
       struct Elf32_Phdr phdr;
 
-      if (file_ofs < 0 || file_ofs > file_length (file))
+      if (file_ofs < 0 || file_ofs > file_length (file)){
+
         goto done;
+      }
       file_seek (file, file_ofs);
 
-      if (file_read (file, &phdr, sizeof phdr) != sizeof phdr)
+      if (file_read (file, &phdr, sizeof phdr) != sizeof phdr){
         goto done;
+      }
       file_ofs += sizeof phdr;
       switch (phdr.p_type) 
         {
@@ -558,8 +564,11 @@ load (const char *file_name, void (**eip) (void), void **esp)
                   zero_bytes = ROUND_UP (page_offset + phdr.p_memsz, PGSIZE);
                 }
               if (!load_segment (file, file_page, (void *) mem_page,
-                                 read_bytes, zero_bytes, writable))
+                                 read_bytes, zero_bytes, writable)){
+
                 goto done;
+              }
+                
             }
           else
             goto done;

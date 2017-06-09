@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 Copying tests/userprog/close-twice into /tmp/QzZdHJOhdr.dsk...
 Copying ../../tests/userprog/sample.txt into /tmp/QzZdHJOhdr.dsk...
 Writing command line to /tmp/ouDuJwvhLd.dsk...
 qemu -hda /tmp/ouDuJwvhLd.dsk -hdb /tmp/oeZsTSqd3t.dsk -hdc /tmp/QzZdHJOhdr.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/userprog/close-twice into /tmp/H57fU1zGrl.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/H57fU1zGrl.dsk...
+Writing command line to /tmp/4xQQRYwIzM.dsk...
+qemu -hda /tmp/4xQQRYwIzM.dsk -hdb /tmp/mc13mdU82B.dsk -hdc /tmp/H57fU1zGrl.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put close-twice put sample.txt run close-twice
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -22,10 +29,17 @@ Executing 'close-twice':
 (close-twice) close "sample.txt" again
 close-twice: exit(-1)
 Execution of 'close-twice' complete.
+<<<<<<< HEAD
 Timer: 64 ticks
 Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 112 reads, 250 writes
+=======
+Timer: 57 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 112 reads, 114 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 75 reads, 0 writes
 Console: 965 characters output
 Keyboard: 0 keys pressed

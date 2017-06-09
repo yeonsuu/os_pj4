@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 Copying tests/filesys/extended/dir-mkdir into /tmp/nfAOIJ2N43.dsk...
 Copying tests/filesys/extended/tar into /tmp/nfAOIJ2N43.dsk...
 Writing command line to /tmp/jwjVKmUTPy.dsk...
 qemu -hda /tmp/jwjVKmUTPy.dsk -hdb tmp.dsk -hdc /tmp/nfAOIJ2N43.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/filesys/extended/dir-mkdir into /tmp/hWjtaaoaw0.dsk...
+Copying tests/filesys/extended/tar into /tmp/hWjtaaoaw0.dsk...
+Writing command line to /tmp/dUooE1Ek0l.dsk...
+qemu -hda /tmp/dUooE1Ek0l.dsk -hdb tmp.dsk -hdc /tmp/hWjtaaoaw0.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put dir-mkdir put tar run dir-mkdir
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
 373 pages available in user pool.
+<<<<<<< HEAD
 Calibrating timer...  75,059,200 loops/s.
+=======
+Calibrating timer...  78,540,800 loops/s.
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -24,10 +35,17 @@ Executing 'dir-mkdir':
 (dir-mkdir) open "b": FAILED
 dir-mkdir: exit(1)
 Execution of 'dir-mkdir' complete.
+<<<<<<< HEAD
 Timer: 70 ticks
 Thread: 0 idle ticks, 69 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 199 reads, 448 writes
+=======
+Timer: 66 ticks
+Thread: 0 idle ticks, 64 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 199 reads, 287 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 159 reads, 0 writes
 Console: 953 characters output
 Keyboard: 0 keys pressed

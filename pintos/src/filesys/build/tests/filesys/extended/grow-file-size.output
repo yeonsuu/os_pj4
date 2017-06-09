@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 Copying tests/filesys/extended/grow-file-size into /tmp/ncEUq3O7CJ.dsk...
 Copying tests/filesys/extended/tar into /tmp/ncEUq3O7CJ.dsk...
 Writing command line to /tmp/Jvp75gP9OJ.dsk...
 qemu -hda /tmp/Jvp75gP9OJ.dsk -hdb tmp.dsk -hdc /tmp/ncEUq3O7CJ.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/filesys/extended/grow-file-size into /tmp/ESVhGVfj4P.dsk...
+Copying tests/filesys/extended/tar into /tmp/ESVhGVfj4P.dsk...
+Writing command line to /tmp/0Emc3jWiIw.dsk...
+qemu -hda /tmp/0Emc3jWiIw.dsk -hdb tmp.dsk -hdc /tmp/ESVhGVfj4P.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put grow-file-size put tar run grow-file-size
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
 373 pages available in user pool.
+<<<<<<< HEAD
 Calibrating timer...  52,377,600 loops/s.
+=======
+Calibrating timer...  78,336,000 loops/s.
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -20,6 +31,7 @@ Executing 'grow-file-size':
 (grow-file-size) create "testfile"
 (grow-file-size) open "testfile"
 (grow-file-size) writing "testfile"
+<<<<<<< HEAD
 (grow-file-size) close "testfile"
 (grow-file-size) open "testfile" for verification
 (grow-file-size) verified contents of "testfile"
@@ -33,6 +45,17 @@ hd0:0: 0 reads, 0 writes
 hd0:1: 208 reads, 528 writes
 hd1:0: 160 reads, 0 writes
 Console: 1161 characters output
+=======
+(grow-file-size) write 37 bytes at offset 0 in "testfile" failed: FAILED
+grow-file-size: exit(1)
+Execution of 'grow-file-size' complete.
+Timer: 67 ticks
+Thread: 0 idle ticks, 66 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 201 reads, 288 writes
+hd1:0: 160 reads, 0 writes
+Console: 1046 characters output
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

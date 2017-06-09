@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Copying tests/userprog/create-empty into /tmp/BfnWF1wWCC.dsk...
 Writing command line to /tmp/9aW9FthFCJ.dsk...
 qemu -hda /tmp/9aW9FthFCJ.dsk -hdb /tmp/ltL65xNJTt.dsk -hdc /tmp/BfnWF1wWCC.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/userprog/create-empty into /tmp/CExf5DCuK8.dsk...
+Writing command line to /tmp/HQKLXfjvPl.dsk...
+qemu -hda /tmp/HQKLXfjvPl.dsk -hdb /tmp/XWKjYKQdY0.dsk -hdc /tmp/CExf5DCuK8.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put create-empty run create-empty
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -19,10 +25,17 @@ Executing 'create-empty':
 (create-empty) end
 create-empty: exit(0)
 Execution of 'create-empty' complete.
+<<<<<<< HEAD
 Timer: 60 ticks
 Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 107 reads, 245 writes
+=======
+Timer: 57 ticks
+Thread: 0 idle ticks, 56 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 107 reads, 112 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 73 reads, 0 writes
 Console: 855 characters output
 Keyboard: 0 keys pressed

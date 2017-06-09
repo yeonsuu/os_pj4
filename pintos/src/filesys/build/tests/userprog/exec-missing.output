@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Copying tests/userprog/exec-missing into /tmp/4OxQWSDEeN.dsk...
 Writing command line to /tmp/5SUT7x1RMe.dsk...
 qemu -hda /tmp/5SUT7x1RMe.dsk -hdb /tmp/QFgNdn9g7n.dsk -hdc /tmp/4OxQWSDEeN.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/userprog/exec-missing into /tmp/7Ls3ScEoOx.dsk...
+Writing command line to /tmp/rHyhaqBUjq.dsk...
+qemu -hda /tmp/rHyhaqBUjq.dsk -hdb /tmp/F1M9dRgI6S.dsk -hdc /tmp/7Ls3ScEoOx.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put exec-missing run exec-missing
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -21,10 +27,17 @@ no-such-file: exit(-1)
 (exec-missing) end
 exec-missing: exit(0)
 Execution of 'exec-missing' complete.
+<<<<<<< HEAD
 Timer: 66 ticks
 Thread: 0 idle ticks, 64 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 107 reads, 244 writes
+=======
+Timer: 58 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 107 reads, 110 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 73 reads, 0 writes
 Console: 921 characters output
 Keyboard: 0 keys pressed

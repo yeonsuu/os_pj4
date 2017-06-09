@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 Copying tests/filesys/base/syn-read into /tmp/BxuJ8Of8dJ.dsk...
 Copying tests/filesys/base/child-syn-read into /tmp/BxuJ8Of8dJ.dsk...
 Writing command line to /tmp/De2IEAYetV.dsk...
 qemu -hda /tmp/De2IEAYetV.dsk -hdb /tmp/PgvLG0ZOZ9.dsk -hdc /tmp/BxuJ8Of8dJ.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/filesys/base/syn-read into /tmp/iSurxASpHm.dsk...
+Copying tests/filesys/base/child-syn-read into /tmp/iSurxASpHm.dsk...
+Writing command line to /tmp/OQel8sVOD5.dsk...
+qemu -hda /tmp/OQel8sVOD5.dsk -hdb /tmp/bvmLn1YbjV.dsk -hdc /tmp/iSurxASpHm.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put syn-read put child-syn-read run syn-read
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
 373 pages available in user pool.
+<<<<<<< HEAD
 Calibrating timer...  78,540,800 loops/s.
+=======
+Calibrating timer...  77,721,600 loops/s.
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 161 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
@@ -26,6 +37,7 @@ child-syn-read: exit(0)
 (syn-read) exec child 2 of 10: "child-syn-read 1"
 child-syn-read: exit(1)
 (syn-read) exec child 3 of 10: "child-syn-read 2"
+<<<<<<< HEAD
 (syn-read) exec child 4 of 10: "child-syn-read 3"
 child-syn-read: exit(2)
 child-syn-read: exit(3)
@@ -36,6 +48,18 @@ child-syn-read: exit(5)
 (syn-read) exec child 7 of 10: "child-syn-read 6"
 (syn-read) exec child 8 of 10: "child-syn-read 7"
 child-syn-read: exit(6)
+=======
+child-syn-read: exit(2)
+(syn-read) exec child 4 of 10: "child-syn-read 3"
+child-syn-read: exit(3)
+(syn-read) exec child 5 of 10: "child-syn-read 4"
+child-syn-read: exit(4)
+(syn-read) exec child 6 of 10: "child-syn-read 5"
+child-syn-read: exit(5)
+(syn-read) exec child 7 of 10: "child-syn-read 6"
+child-syn-read: exit(6)
+(syn-read) exec child 8 of 10: "child-syn-read 7"
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 child-syn-read: exit(7)
 (syn-read) exec child 9 of 10: "child-syn-read 8"
 child-syn-read: exit(8)
@@ -54,10 +78,17 @@ child-syn-read: exit(9)
 (syn-read) end
 syn-read: exit(0)
 Execution of 'syn-read' complete.
+<<<<<<< HEAD
 Timer: 125 ticks
 Thread: 0 idle ticks, 87 kernel ticks, 38 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 279 reads, 879 writes
+=======
+Timer: 102 ticks
+Thread: 0 idle ticks, 69 kernel ticks, 33 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 279 reads, 319 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 161 reads, 0 writes
 Console: 2284 characters output
 Keyboard: 0 keys pressed

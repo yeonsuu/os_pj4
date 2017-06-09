@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 Copying tests/filesys/extended/dir-empty-name into /tmp/YR27B8tkWL.dsk...
 Copying tests/filesys/extended/tar into /tmp/YR27B8tkWL.dsk...
 Writing command line to /tmp/t23QTrzKAn.dsk...
 qemu -hda /tmp/t23QTrzKAn.dsk -hdb tmp.dsk -hdc /tmp/YR27B8tkWL.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/filesys/extended/dir-empty-name into /tmp/lPAfUFeghO.dsk...
+Copying tests/filesys/extended/tar into /tmp/lPAfUFeghO.dsk...
+Writing command line to /tmp/v9EbXHgQcE.dsk...
+qemu -hda /tmp/v9EbXHgQcE.dsk -hdb tmp.dsk -hdc /tmp/lPAfUFeghO.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put dir-empty-name put tar run dir-empty-name
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -21,10 +28,17 @@ Executing 'dir-empty-name':
 (dir-empty-name) mkdir "" (must return false): FAILED
 dir-empty-name: exit(1)
 Execution of 'dir-empty-name' complete.
+<<<<<<< HEAD
 Timer: 66 ticks
 Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 194 reads, 438 writes
+=======
+Timer: 63 ticks
+Thread: 0 idle ticks, 62 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 194 reads, 281 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 158 reads, 0 writes
 Console: 969 characters output
 Keyboard: 0 keys pressed

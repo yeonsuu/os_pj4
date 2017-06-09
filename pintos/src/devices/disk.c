@@ -258,10 +258,14 @@ disk_write (struct disk *d, disk_sector_t sec_no, const void *buffer)
   output_sector (c, buffer);
   sema_down (&c->completion_wait);
   d->write_cnt++;
+<<<<<<< HEAD
 
   lock_release (&c->lock);
 //    ASSERT(0);
 
+=======
+  lock_release (&c->lock);
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 }
 
 /* Disk detection and identification. */

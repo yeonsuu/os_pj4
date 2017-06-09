@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Copying tests/userprog/rox-simple into /tmp/SRnK0DkDwN.dsk...
 Writing command line to /tmp/DtWRnufZ57.dsk...
 qemu -hda /tmp/DtWRnufZ57.dsk -hdb /tmp/u13U0lTA42.dsk -hdc /tmp/SRnK0DkDwN.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/userprog/rox-simple into /tmp/b6YWP5FZi9.dsk...
+Writing command line to /tmp/b52vEGR1Lq.dsk...
+qemu -hda /tmp/b52vEGR1Lq.dsk -hdb /tmp/TKTVbAWDVb.dsk -hdc /tmp/b6YWP5FZi9.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put rox-simple run rox-simple
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -21,10 +27,17 @@ Executing 'rox-simple':
 (rox-simple) end
 rox-simple: exit(0)
 Execution of 'rox-simple' complete.
+<<<<<<< HEAD
 Timer: 63 ticks
 Thread: 0 idle ticks, 62 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 106 reads, 180 writes
+=======
+Timer: 64 ticks
+Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 106 reads, 110 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 73 reads, 0 writes
 Console: 911 characters output
 Keyboard: 0 keys pressed

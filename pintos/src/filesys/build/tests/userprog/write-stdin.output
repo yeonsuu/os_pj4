@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 Copying tests/userprog/write-stdin into /tmp/DN7y45lSNR.dsk...
 Writing command line to /tmp/K4TZ1TwkLr.dsk...
 qemu -hda /tmp/K4TZ1TwkLr.dsk -hdb /tmp/y28N6BpSeW.dsk -hdc /tmp/DN7y45lSNR.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/userprog/write-stdin into /tmp/Ox3O8otcUq.dsk...
+Writing command line to /tmp/U08qGMjj9e.dsk...
+qemu -hda /tmp/U08qGMjj9e.dsk -hdb /tmp/965vs8eC7L.dsk -hdc /tmp/Ox3O8otcUq.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put write-stdin run write-stdin
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -17,10 +23,17 @@ Executing 'write-stdin':
 (write-stdin) begin
 write-stdin: exit(-1)
 Execution of 'write-stdin' complete.
+<<<<<<< HEAD
 Timer: 63 ticks
 Thread: 0 idle ticks, 61 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
 hd0:1: 104 reads, 239 writes
+=======
+Timer: 58 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 104 reads, 109 writes
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd1:0: 73 reads, 0 writes
 Console: 801 characters output
 Keyboard: 0 keys pressed

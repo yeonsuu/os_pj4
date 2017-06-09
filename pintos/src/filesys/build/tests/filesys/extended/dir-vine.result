@@ -1,2 +1,6 @@
 FAIL
+<<<<<<< HEAD
 run: open ".": FAILED
+=======
+run: created files and directories only to level 0: FAILED
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3

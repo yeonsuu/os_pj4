@@ -1,16 +1,26 @@
+<<<<<<< HEAD
 Writing command line to /tmp/P50I2DuV3B.dsk...
 qemu -hda /tmp/P50I2DuV3B.dsk -hdb tmp.dsk -hdc /tmp/PgNeQgJZb8.dsk -m 4 -net none -nographic -monitor null
+=======
+Writing command line to /tmp/qF2xWOfRBa.dsk...
+qemu -hda /tmp/qF2xWOfRBa.dsk -hdb tmp.dsk -hdc /tmp/AZ9fpbzT75.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
 373 pages available in user pool.
+<<<<<<< HEAD
 Calibrating timer...  78,336,000 loops/s.
+=======
+Calibrating timer...  78,540,800 loops/s.
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Boot complete.
 Executing 'tar fs.tar /':
 /: open failed
+<<<<<<< HEAD
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
@@ -24,3 +34,19 @@ Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
 Copying tests/filesys/extended/syn-rw.tar out of /tmp/PgNeQgJZb8.dsk...
+=======
+error writing archive
+tar: exit(1)
+Execution of 'tar fs.tar /' complete.
+Getting 'fs.tar' from the file system...
+Timer: 55 ticks
+Thread: 0 idle ticks, 53 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 38 reads, 1 writes
+hd1:0: 0 reads, 1 writes
+Console: 764 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
+Copying tests/filesys/extended/syn-rw.tar out of /tmp/AZ9fpbzT75.dsk...
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3

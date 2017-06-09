@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 Copying tests/filesys/extended/dir-mk-tree into /tmp/CAhgvRQVbe.dsk...
 Copying tests/filesys/extended/tar into /tmp/CAhgvRQVbe.dsk...
 Writing command line to /tmp/6Ypzn1eu5L.dsk...
 qemu -hda /tmp/6Ypzn1eu5L.dsk -hdb tmp.dsk -hdc /tmp/CAhgvRQVbe.dsk -m 4 -net none -nographic -monitor null
+=======
+Copying tests/filesys/extended/dir-mk-tree into /tmp/PNNHNYlnAc.dsk...
+Copying tests/filesys/extended/tar into /tmp/PNNHNYlnAc.dsk...
+Writing command line to /tmp/06zVNCH64V.dsk...
+qemu -hda /tmp/06zVNCH64V.dsk -hdb tmp.dsk -hdc /tmp/PNNHNYlnAc.dsk -m 4 -net none -nographic -monitor null
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Kernel command line: -q -f put dir-mk-tree put tar run dir-mk-tree
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
@@ -18,6 +25,7 @@ Putting 'tar' into the file system...
 Executing 'dir-mk-tree':
 (dir-mk-tree) begin
 (dir-mk-tree) creating /0/0/0/0 through /3/2/2/3...
+<<<<<<< HEAD
 (dir-mk-tree) open "/0/2/0/3"
 (dir-mk-tree) close "/0/2/0/3"
 (dir-mk-tree) end
@@ -29,6 +37,17 @@ hd0:0: 0 reads, 0 writes
 hd0:1: 352 reads, 1234 writes
 hd1:0: 162 reads, 0 writes
 Console: 982 characters output
+=======
+(dir-mk-tree) create "/0/1/0/2": FAILED
+dir-mk-tree: exit(1)
+Execution of 'dir-mk-tree' complete.
+Timer: 66 ticks
+Thread: 0 idle ticks, 63 kernel ticks, 3 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 216 reads, 307 writes
+hd1:0: 162 reads, 0 writes
+Console: 940 characters output
+>>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

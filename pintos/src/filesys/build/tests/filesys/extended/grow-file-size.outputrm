@@ -1,0 +1,40 @@
+Copying tests/filesys/extended/grow-file-size into /tmp/ZqglAkcK9M.dsk...
+Copying tests/filesys/extended/tar into /tmp/ZqglAkcK9M.dsk...
+Writing command line to /tmp/a1MFBgooBQ.dsk...
+qemu -hda /tmp/a1MFBgooBQ.dsk -hdb tmp.dsk -hdc /tmp/ZqglAkcK9M.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-file-size put tar run grow-file-size -f tmp.dsk
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  75,059,200 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+WRITE AT
+WHILE
+1
+2
+3
+NOT FULL
+WRITE AT
+WHILE
+1
+2
+3
+NOT FULL
+WRITE AT
+Kernel PANIC at ../../userprog/pagedir.c:61 in lookup_page(): assertion `pd != NULL' failed.
+Call stack: 0xc0107276 0xc010a391 0xc010a787 0xc010a1cc 0xc010adae 0xc0101745 0xc010191b 0xc010d036 0xc010c0a6 0xc010cc0f 0xc010c009 0xc010be8d 0xc010bc51 0xc010bab5 0xc01000b9.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 58 ticks
+Thread: 0 idle ticks, 58 kernel ticks, 0 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 2 reads, 4 writes
+hd1:0: 0 reads, 0 writes
+Console: 1145 characters output
+Keyboard: 0 keys pressed
+Exception: 1 page faults
+Powering off...

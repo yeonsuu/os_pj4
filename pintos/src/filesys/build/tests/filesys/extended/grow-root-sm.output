@@ -1,0 +1,51 @@
+Copying tests/filesys/extended/grow-root-sm into /tmp/Lh3EE4tiaQ.dsk...
+Copying tests/filesys/extended/tar into /tmp/Lh3EE4tiaQ.dsk...
+Writing command line to /tmp/c2mViVnBoK.dsk...
+qemu -hda /tmp/c2mViVnBoK.dsk -hdb tmp.dsk -hdc /tmp/Lh3EE4tiaQ.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-root-sm put tar run grow-root-sm
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+done.
+Boot complete.
+Putting 'grow-root-sm' into the file system...
+Putting 'tar' into the file system...
+Executing 'grow-root-sm':
+(grow-root-sm) begin
+(grow-root-sm) creating and checking "file0"
+(grow-root-sm) creating and checking "file1"
+(grow-root-sm) creating and checking "file2"
+(grow-root-sm) creating and checking "file3"
+(grow-root-sm) creating and checking "file4"
+(grow-root-sm) creating and checking "file5"
+(grow-root-sm) creating and checking "file6"
+(grow-root-sm) creating and checking "file7"
+(grow-root-sm) creating and checking "file8"
+(grow-root-sm) creating and checking "file9"
+(grow-root-sm) creating and checking "file10"
+(grow-root-sm) creating and checking "file11"
+(grow-root-sm) creating and checking "file12"
+(grow-root-sm) creating and checking "file13"
+(grow-root-sm) creating and checking "file14"
+(grow-root-sm) creating and checking "file15"
+(grow-root-sm) creating and checking "file16"
+(grow-root-sm) creating and checking "file17"
+(grow-root-sm) creating and checking "file18"
+(grow-root-sm) creating and checking "file19"
+(grow-root-sm) end
+grow-root-sm: exit(0)
+Execution of 'grow-root-sm' complete.
+Timer: 75 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 10 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 318 reads, 612 writes
+hd1:0: 160 reads, 0 writes
+Console: 1785 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

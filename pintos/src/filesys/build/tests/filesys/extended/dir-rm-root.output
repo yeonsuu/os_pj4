@@ -1,0 +1,33 @@
+Copying tests/filesys/extended/dir-rm-root into /tmp/2ttDTPRzVa.dsk...
+Copying tests/filesys/extended/tar into /tmp/2ttDTPRzVa.dsk...
+Writing command line to /tmp/my72vZ4AVB.dsk...
+qemu -hda /tmp/my72vZ4AVB.dsk -hdb tmp.dsk -hdc /tmp/2ttDTPRzVa.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put dir-rm-root put tar run dir-rm-root
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+done.
+Boot complete.
+Putting 'dir-rm-root' into the file system...
+Putting 'tar' into the file system...
+Executing 'dir-rm-root':
+(dir-rm-root) begin
+(dir-rm-root) remove "/" (must fail)
+(dir-rm-root) create "/a"
+(dir-rm-root) end
+dir-rm-root: exit(0)
+Execution of 'dir-rm-root' complete.
+Timer: 67 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 198 reads, 446 writes
+hd1:0: 159 reads, 0 writes
+Console: 929 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

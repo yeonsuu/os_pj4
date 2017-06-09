@@ -1,0 +1,25 @@
+Writing command line to /tmp/albxoiT9pL.dsk...
+qemu -hda /tmp/albxoiT9pL.dsk -hdb /tmp/EIX9B23PyQ.dsk -hdc /tmp/4744zEKQRF.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q run 'tar fs.tar /' get fs.tar
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Kernel PANIC at ../../filesys/free-map.c:59 in free_map_open(): can't read free map
+Call stack: 0xc0107276 0xc010be78 0xc010baba 0xc01000b9.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 52 ticks
+Thread: 0 idle ticks, 52 kernel ticks, 0 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 1 reads, 0 writes
+hd1:0: 0 reads, 0 writes
+Console: 888 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
+Copying .tar out of /tmp/4744zEKQRF.dsk...

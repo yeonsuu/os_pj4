@@ -1,0 +1,29 @@
+Copying tests/filesys/extended/grow-file-size.output into /tmp/RE0b1nKU9y.dsk...
+Writing command line to /tmp/WTCxdMasZp.dsk...
+qemu -hda /tmp/WTCxdMasZp.dsk -hdb /tmp/k4EiZxQv9p.dsk -hdc /tmp/RE0b1nKU9y.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put grow-file-size.output run grow-file-size-persistence
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 1 sector (512 byte) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+done.
+Boot complete.
+Putting 'grow-file-size.output' into the file system...
+Kernel PANIC at ../../filesys/fsutil.c:114 in fsutil_put(): grow-file-size.output: create failed
+Call stack: 0xc0107276 0xc010dd6b 0xc0100681 0xc01000cd.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 52 ticks
+Thread: 0 idle ticks, 52 kernel ticks, 0 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 3 reads, 5 writes
+hd1:0: 1 reads, 0 writes
+Console: 1037 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

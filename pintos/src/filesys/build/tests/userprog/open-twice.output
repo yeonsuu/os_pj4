@@ -1,0 +1,33 @@
+Copying tests/userprog/open-twice into /tmp/V87IRaKAYw.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/V87IRaKAYw.dsk...
+Writing command line to /tmp/4CwPxmANcK.dsk...
+qemu -hda /tmp/4CwPxmANcK.dsk -hdb /tmp/tAWqaE6b1u.dsk -hdc /tmp/V87IRaKAYw.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put open-twice put sample.txt run open-twice
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 75 sector (37 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+done.
+Boot complete.
+Putting 'open-twice' into the file system...
+Putting 'sample.txt' into the file system...
+Executing 'open-twice':
+(open-twice) begin
+(open-twice) open "sample.txt" once
+(open-twice) open "sample.txt" again
+(open-twice) end
+open-twice: exit(0)
+Execution of 'open-twice' complete.
+Timer: 61 ticks
+Thread: 0 idle ticks, 59 kernel ticks, 2 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 115 reads, 252 writes
+hd1:0: 75 reads, 0 writes
+Console: 943 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

@@ -96,7 +96,7 @@ struct thread
     /* Owned by userprog/process.c. */
     uint32_t *pagedir;                  /* Page directory. */
 #endif
-
+    
     /* Owned by thread.c. */
     unsigned magic;                     /* Detects stack overflow. */
   };

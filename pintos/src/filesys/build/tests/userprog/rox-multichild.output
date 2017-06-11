@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/userprog/rox-multichild into /tmp/jmEObkTn4U.dsk...
-Copying tests/userprog/child-rox into /tmp/jmEObkTn4U.dsk...
-Writing command line to /tmp/vOMXnEzzU6.dsk...
-qemu -hda /tmp/vOMXnEzzU6.dsk -hdb /tmp/I8HMgfV0TC.dsk -hdc /tmp/jmEObkTn4U.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/rox-multichild into /tmp/jCb0dAR9cK.dsk...
-Copying tests/userprog/child-rox into /tmp/jCb0dAR9cK.dsk...
-Writing command line to /tmp/GHUYfZydjX.dsk...
-qemu -hda /tmp/GHUYfZydjX.dsk -hdb /tmp/mzHFbpXkPv.dsk -hdc /tmp/jCb0dAR9cK.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/rox-multichild into /tmp/yBJLsp7Nlt.dsk...
+Copying tests/userprog/child-rox into /tmp/yBJLsp7Nlt.dsk...
+Writing command line to /tmp/XwpTAq4eQW.dsk...
+qemu -hda /tmp/XwpTAq4eQW.dsk -hdb /tmp/nJ6cQOX20x.dsk -hdc /tmp/yBJLsp7Nlt.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put rox-multichild put child-rox run rox-multichild
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  62,156,800 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  49,100,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 156 sector (78 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -65,17 +54,10 @@ child-rox: exit(12)
 (rox-multichild) end
 rox-multichild: exit(0)
 Execution of 'rox-multichild' complete.
-<<<<<<< HEAD
-Timer: 74 ticks
-Thread: 0 idle ticks, 67 kernel ticks, 7 user ticks
+Timer: 73 ticks
+Thread: 0 idle ticks, 67 kernel ticks, 6 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 239 reads, 480 writes
-=======
-Timer: 72 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 7 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 239 reads, 302 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 214 reads, 518 writes
 hd1:0: 156 reads, 0 writes
 Console: 1840 characters output
 Keyboard: 0 keys pressed

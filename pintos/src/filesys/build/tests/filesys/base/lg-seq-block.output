@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-Copying tests/filesys/base/lg-seq-block into /tmp/GVs3wVAfbK.dsk...
-Writing command line to /tmp/8LR8sKb9YK.dsk...
-qemu -hda /tmp/8LR8sKb9YK.dsk -hdb /tmp/yGtercaGsX.dsk -hdc /tmp/GVs3wVAfbK.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/base/lg-seq-block into /tmp/hKDstHHpho.dsk...
-Writing command line to /tmp/6hO1G1SWkL.dsk...
-qemu -hda /tmp/6hO1G1SWkL.dsk -hdb /tmp/oH0pld99PQ.dsk -hdc /tmp/hKDstHHpho.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/base/lg-seq-block into /tmp/a4qGj2j57b.dsk...
+Writing command line to /tmp/2ff2Lm64FC.dsk...
+qemu -hda /tmp/2ff2Lm64FC.dsk -hdb /tmp/kPCe1w6wxw.dsk -hdc /tmp/a4qGj2j57b.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put lg-seq-block run lg-seq-block
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  77,721,600 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  49,100,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 76 sector (38 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -35,17 +25,10 @@ Executing 'lg-seq-block':
 (lg-seq-block) end
 lg-seq-block: exit(0)
 Execution of 'lg-seq-block' complete.
-<<<<<<< HEAD
 Timer: 80 ticks
-Thread: 0 idle ticks, 60 kernel ticks, 20 user ticks
+Thread: 0 idle ticks, 61 kernel ticks, 19 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 557 reads, 764 writes
-=======
-Timer: 77 ticks
-Thread: 0 idle ticks, 60 kernel ticks, 17 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 555 reads, 564 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 552 reads, 822 writes
 hd1:0: 76 reads, 0 writes
 Console: 1070 characters output
 Keyboard: 0 keys pressed

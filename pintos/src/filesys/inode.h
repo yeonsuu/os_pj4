@@ -41,7 +41,6 @@ struct cache_entry * new_entry(void);
 bool sector_allocate(size_t, struct inode_disk * );
 int min(int, int);
 void indirect_release(size_t , disk_sector_t );
-<<<<<<< HEAD
 void indirect_release_temp(size_t, disk_sector_t);
 bool inode_indirect(size_t , disk_sector_t);
 bool inode_doubly(size_t, struct inode_disk *);
@@ -52,11 +51,5 @@ bool indirect_allocate(int, int, disk_sector_t);
 bool doubly_allocate(int, int, disk_sector_t);
 
 
-
-=======
-
-bool inode_indirect(size_t , disk_sector_t);
-bool inode_doubly(size_t, struct inode_disk *);
-
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+void buffer_flush(void);
 #endif /* filesys/inode.h */

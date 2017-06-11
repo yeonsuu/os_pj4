@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/args-many into /tmp/vMskHWYOOl.dsk...
-Writing command line to /tmp/aJsxjwMAOB.dsk...
-qemu -hda /tmp/aJsxjwMAOB.dsk -hdb /tmp/sDq4U6k97G.dsk -hdc /tmp/vMskHWYOOl.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/args-many into /tmp/VgUBhsTYAV.dsk...
-Writing command line to /tmp/WABUrNOe8c.dsk...
-qemu -hda /tmp/WABUrNOe8c.dsk -hdb /tmp/trpATsFqL8.dsk -hdc /tmp/VgUBhsTYAV.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/args-many into /tmp/Ctrjzx8Bvt.dsk...
+Writing command line to /tmp/9py52zsGwX.dsk...
+qemu -hda /tmp/9py52zsGwX.dsk -hdb /tmp/9zpqVRbbG9.dsk -hdc /tmp/Ctrjzx8Bvt.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put args-many run 'args-many a b c d e f g h i j k l m n o p q r s t u v'
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,326,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 72 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -49,17 +43,10 @@ Executing 'args-many a b c d e f g h i j k l m n o p q r s t u v':
 (args) end
 args-many: exit(0)
 Execution of 'args-many a b c d e f g h i j k l m n o p q r s t u v' complete.
-<<<<<<< HEAD
 Timer: 63 ticks
-Thread: 0 idle ticks, 61 kernel ticks, 2 user ticks
+Thread: 0 idle ticks, 60 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 188 writes
-=======
-Timer: 61 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 2 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 108 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 102 reads, 301 writes
 hd1:0: 72 reads, 0 writes
 Console: 1470 characters output
 Keyboard: 0 keys pressed

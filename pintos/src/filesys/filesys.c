@@ -7,6 +7,8 @@
 #include "filesys/inode.h"
 #include "filesys/directory.h"
 #include "devices/disk.h"
+#include "threads/thread.h"
+
 
 /* The disk that contains the file system. */
 struct disk *filesys_disk;
@@ -45,7 +47,7 @@ filesys_done (void)
     free(c);
   }
   */
-
+  buffer_flush();
   free_map_close ();
 }
 
@@ -57,11 +59,23 @@ bool
 filesys_create (const char *name, off_t initial_size) 
 {
   disk_sector_t inode_sector = 0;
-  struct dir *dir = dir_open_root ();
+  char * file_name;
+  struct dir * dir;
+  
+  if (thread_current()->tid == 1){
+    dir = dir_open_root();
+    file_name = name;
+  }
+  else {
+    dir = find_path(name, &file_name);
+  }
+
+
   bool success = (dir != NULL
                   && free_map_allocate (1, &inode_sector)
                   && inode_create (inode_sector, initial_size)
-                  && dir_add (dir, name, inode_sector));
+                  && dir_add (dir, file_name, inode_sector));
+  
   if (!success && inode_sector != 0) 
     free_map_release (inode_sector, 1);
   dir_close (dir);
@@ -77,14 +91,27 @@ filesys_create (const char *name, off_t initial_size)
 struct file *
 filesys_open (const char *name)
 {
-  struct dir *dir = dir_open_root ();
+  char * file_name;
+
+  file_name = malloc(strlen(name)+1);
+
+  struct dir *dir;
+  if (thread_current()->tid == 1){
+      dir = dir_open_root();
+    file_name = name;
+  }
+
+  else {
+    dir = find_path(name, &file_name);
+  }
+  ASSERT(dir != NULL);
   struct inode *inode = NULL;
 
-  if (dir != NULL){
-    dir_lookup (dir, name, &inode);
 
+  if (dir != NULL){
+    dir_lookup (dir, file_name, &inode);
   }
-  dir_close (dir);
+  //dir_close (dir);
 
   return file_open (inode);
 }

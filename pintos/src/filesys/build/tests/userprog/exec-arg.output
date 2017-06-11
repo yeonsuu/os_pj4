@@ -1,24 +1,33 @@
-<<<<<<< HEAD
-Copying tests/userprog/exec-arg into /tmp/PoBP2B7kWQ.dsk...
-Copying tests/userprog/child-args into /tmp/PoBP2B7kWQ.dsk...
-Writing command line to /tmp/6WuSsGH7LB.dsk...
-qemu -hda /tmp/6WuSsGH7LB.dsk -hdb /tmp/rjP5to19gl.dsk -hdc /tmp/PoBP2B7kWQ.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/exec-arg into /tmp/y5Xcz0oz4p.dsk...
-Copying tests/userprog/child-args into /tmp/y5Xcz0oz4p.dsk...
-Writing command line to /tmp/7QdT78aEte.dsk...
-qemu -hda /tmp/7QdT78aEte.dsk -hdb /tmp/kCKGhtQljc.dsk -hdc /tmp/y5Xcz0oz4p.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/exec-arg into /tmp/SnwFUvXafG.dsk...
+Copying tests/userprog/child-args into /tmp/SnwFUvXafG.dsk...
+Writing command line to /tmp/XElxkWuqAW.dsk...
+qemu -hda /tmp/XElxkWuqAW.dsk -hdb /tmp/L1oBEdBtP1.dsk -hdc /tmp/SnwFUvXafG.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put exec-arg put child-args run exec-arg
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
+372 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  63,795,200 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...create
+done.
+Boot complete.
+Putting 'exec-arg' into the file system...
+Putting 'child-args' into the file system...
+Executing 'exec-arg':
+Kernel PANIC at ../../userprog/pagedir.c:61 in lookup_page(): assertion `pd != NULL' failed.
+Call stack: 0xc0107276 0xc010a3a1 0xc010a797 0xc010a1e2 0xc010adbe 0xc0101745 0xc010191b 0xc010cbf6 0xc010befc 0xc0109612 0xc0100d3b.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Kernel PANIC recursion at ../../devices/timer.c:187 in real_time_sleep().
+Kernel command line: -q -f put exec-arg put child-args run exec-arg
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+372 pages available in user pool.
+Calibrating timer...  76,800,000 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -38,17 +47,10 @@ child-args: exit(0)
 (exec-arg) end
 exec-arg: exit(0)
 Execution of 'exec-arg' complete.
-<<<<<<< HEAD
-Timer: 71 ticks
-Thread: 0 idle ticks, 69 kernel ticks, 2 user ticks
+Timer: 73 ticks
+Thread: 0 idle ticks, 71 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 206 reads, 477 writes
-=======
-Timer: 69 ticks
-Thread: 0 idle ticks, 66 kernel ticks, 3 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 206 reads, 277 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 200 reads, 534 writes
 hd1:0: 145 reads, 0 writes
 Console: 996 characters output
 Keyboard: 0 keys pressed

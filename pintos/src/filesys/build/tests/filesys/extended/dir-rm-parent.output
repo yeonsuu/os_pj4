@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/dir-rm-parent into /tmp/K9XmViOTNb.dsk...
-Copying tests/filesys/extended/tar into /tmp/K9XmViOTNb.dsk...
-Writing command line to /tmp/ktsJzN33RQ.dsk...
-qemu -hda /tmp/ktsJzN33RQ.dsk -hdb tmp.dsk -hdc /tmp/K9XmViOTNb.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/dir-rm-parent into /tmp/NwZwMKRQww.dsk...
-Copying tests/filesys/extended/tar into /tmp/NwZwMKRQww.dsk...
-Writing command line to /tmp/R2NiNdq1nK.dsk...
-qemu -hda /tmp/R2NiNdq1nK.dsk -hdb tmp.dsk -hdc /tmp/NwZwMKRQww.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/dir-rm-parent into /tmp/EOCnZknaCH.dsk...
+Copying tests/filesys/extended/tar into /tmp/EOCnZknaCH.dsk...
+Writing command line to /tmp/pM9f7xiZr5.dsk...
+qemu -hda /tmp/pM9f7xiZr5.dsk -hdb tmp.dsk -hdc /tmp/EOCnZknaCH.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-parent put tar run dir-rm-parent
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,336,000 loops/s.
-=======
-Calibrating timer...  75,264,000 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  49,100,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -36,17 +25,10 @@ Executing 'dir-rm-parent':
 (dir-rm-parent) end
 dir-rm-parent: exit(0)
 Execution of 'dir-rm-parent' complete.
-<<<<<<< HEAD
-Timer: 72 ticks
-Thread: 0 idle ticks, 71 kernel ticks, 1 user ticks
+Timer: 68 ticks
+Thread: 0 idle ticks, 66 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 197 reads, 443 writes
-=======
-Timer: 67 ticks
-Thread: 0 idle ticks, 66 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 197 reads, 284 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 196 reads, 508 writes
 hd1:0: 159 reads, 0 writes
 Console: 1026 characters output
 Keyboard: 0 keys pressed

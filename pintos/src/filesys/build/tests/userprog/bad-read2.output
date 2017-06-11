@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/bad-read2 into /tmp/aJVvv00Zfd.dsk...
-Writing command line to /tmp/PAafxTvYP2.dsk...
-qemu -hda /tmp/PAafxTvYP2.dsk -hdb /tmp/0CD1IylcTE.dsk -hdc /tmp/aJVvv00Zfd.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/bad-read2 into /tmp/h8l8y7y0Vb.dsk...
-Writing command line to /tmp/TtnUhyeCJx.dsk...
-qemu -hda /tmp/TtnUhyeCJx.dsk -hdb /tmp/rKTyaLTgSn.dsk -hdc /tmp/h8l8y7y0Vb.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/bad-read2 into /tmp/gZdjapFbX7.dsk...
+Writing command line to /tmp/zOYnwyoWYY.dsk...
+qemu -hda /tmp/zOYnwyoWYY.dsk -hdb /tmp/jQ9gD0FkFn.dsk -hdc /tmp/gZdjapFbX7.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put bad-read2 run bad-read2
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  75,264,000 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  26,188,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -27,17 +17,10 @@ Executing 'bad-read2':
 (bad-read2) begin
 bad-read2: exit(-1)
 Execution of 'bad-read2' complete.
-<<<<<<< HEAD
-Timer: 62 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 105 reads, 242 writes
-=======
 Timer: 60 ticks
 Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 105 reads, 110 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 103 reads, 303 writes
 hd1:0: 73 reads, 0 writes
 Console: 787 characters output
 Keyboard: 0 keys pressed

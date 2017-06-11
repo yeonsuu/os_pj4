@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/userprog/read-normal into /tmp/tdluKhnoln.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/tdluKhnoln.dsk...
-Writing command line to /tmp/UeqMicnbf5.dsk...
-qemu -hda /tmp/UeqMicnbf5.dsk -hdb /tmp/mMh16GMaFL.dsk -hdc /tmp/tdluKhnoln.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/read-normal into /tmp/bne9KABPsB.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/bne9KABPsB.dsk...
-Writing command line to /tmp/DheMy3xRE9.dsk...
-qemu -hda /tmp/DheMy3xRE9.dsk -hdb /tmp/YvnCDUp6wE.dsk -hdc /tmp/bne9KABPsB.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/read-normal into /tmp/ppddPv1VqB.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/ppddPv1VqB.dsk...
+Writing command line to /tmp/9CYK8dEojq.dsk...
+qemu -hda /tmp/9CYK8dEojq.dsk -hdb /tmp/Wj7t6Smftl.dsk -hdc /tmp/ppddPv1VqB.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put read-normal put sample.txt run read-normal
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  65,433,600 loops/s.
-=======
-Calibrating timer...  65,331,200 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  50,534,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 76 sector (38 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -34,17 +23,10 @@ Executing 'read-normal':
 (read-normal) end
 read-normal: exit(0)
 Execution of 'read-normal' complete.
-<<<<<<< HEAD
-Timer: 62 ticks
-Thread: 0 idle ticks, 60 kernel ticks, 2 user ticks
+Timer: 64 ticks
+Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 113 reads, 252 writes
-=======
-Timer: 60 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 113 reads, 116 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 108 reads, 310 writes
 hd1:0: 76 reads, 0 writes
 Console: 1008 characters output
 Keyboard: 0 keys pressed

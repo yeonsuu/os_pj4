@@ -115,6 +115,7 @@ main (void)
   disk_init ();
   filesys_init (format_filesys);
 #endif
+  //find_process(thread_current() -> tid)->curr_dir = dir_open_root();
 
   printf ("Boot complete.\n");
   

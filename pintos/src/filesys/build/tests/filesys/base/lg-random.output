@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-Copying tests/filesys/base/lg-random into /tmp/sUFf2fUaKs.dsk...
-Writing command line to /tmp/ZxeAHUAgLQ.dsk...
-qemu -hda /tmp/ZxeAHUAgLQ.dsk -hdb /tmp/kBhREt1Oa3.dsk -hdc /tmp/sUFf2fUaKs.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/base/lg-random into /tmp/ogqxWexFGN.dsk...
-Writing command line to /tmp/gxX9LVr4qI.dsk...
-qemu -hda /tmp/gxX9LVr4qI.dsk -hdb /tmp/UYFVxdsLi0.dsk -hdc /tmp/ogqxWexFGN.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/base/lg-random into /tmp/iZkYqntLYi.dsk...
+Writing command line to /tmp/LJKHzv4jYN.dsk...
+qemu -hda /tmp/LJKHzv4jYN.dsk -hdb /tmp/ZHRI6mqGzC.dsk -hdc /tmp/iZkYqntLYi.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put lg-random run lg-random
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,377,600 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 78 sector (39 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -29,17 +23,10 @@ Executing 'lg-random':
 (lg-random) end
 lg-random: exit(0)
 Execution of 'lg-random' complete.
-<<<<<<< HEAD
-Timer: 75 ticks
-Thread: 0 idle ticks, 58 kernel ticks, 17 user ticks
+Timer: 77 ticks
+Thread: 0 idle ticks, 60 kernel ticks, 17 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 490 reads, 683 writes
-=======
-Timer: 74 ticks
-Thread: 0 idle ticks, 58 kernel ticks, 16 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 489 reads, 548 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 486 reads, 742 writes
 hd1:0: 78 reads, 0 writes
 Console: 969 characters output
 Keyboard: 0 keys pressed

@@ -5,6 +5,9 @@
 #include "filesys/filesys.h"
 #include "filesys/inode.h"
 #include "threads/malloc.h"
+#include "threads/thread.h"
+#include "userprog/process.h"
+
 
 /* A directory. */
 struct dir 
@@ -113,7 +116,7 @@ lookup (const struct dir *dir, const char *name,
 
 /* Searches DIR for a file with the given NAME
    and returns true if one exists, false otherwise.
-   On success, sets *INODE to an inode for the file, otherwise to
+   On success, sets *INODE to an inode for tfhe file, otherwise to
    a null pointer.  The caller must close *INODE. */
 bool
 dir_lookup (const struct dir *dir, const char *name,
@@ -124,8 +127,9 @@ dir_lookup (const struct dir *dir, const char *name,
   ASSERT (dir != NULL);
   ASSERT (name != NULL);
 
-  if (lookup (dir, name, &e, NULL))
+  if (lookup (dir, name, &e, NULL)){
     *inode = inode_open (e.inode_sector);
+  }
   else
     *inode = NULL;
 
@@ -149,8 +153,9 @@ dir_add (struct dir *dir, const char *name, disk_sector_t inode_sector)
   ASSERT (name != NULL);
 
   /* Check NAME for validity. */
-  if (*name == '\0' || strlen (name) > NAME_MAX)
+  if (*name == '\0' || strlen (name) > NAME_MAX){
     return false;
+  }
 
   /* Check that NAME is not in use. */
   if (lookup (dir, name, NULL, NULL))
@@ -233,4 +238,61 @@ dir_readdir (struct dir *dir, char name[NAME_MAX + 1])
         } 
     }
   return false;
+}
+
+
+struct dir *
+find_path(char *path, char ** file_name)
+{
+  char *s;
+  s = malloc(strlen(path) +1);
+  ASSERT(path != NULL);
+  strlcpy(s, path, strlen(path) +1);
+  char *token, *save_ptr;
+  
+
+  struct dir * d;
+
+  if(path[0] == '/')
+    d = dir_open_root();
+
+  else
+  {  
+    struct process * p = find_process(thread_current()->tid);
+    if(p->curr_dir == NULL)
+      p->curr_dir = dir_open_root();
+      d = dir_reopen(p->curr_dir);
+  }  
+
+  token = strtok_r (s, "/", &save_ptr);
+  char * tokens[100];
+  int token_cnt = 0; 
+  while(token != NULL){
+    tokens[token_cnt] = malloc(strlen(token)+1);
+    strlcpy(tokens[token_cnt], token, strlen(token)+1);
+//    tokens[token_cnt] = token;
+    token_cnt++;
+    token = strtok_r(NULL, "/", &save_ptr);    
+   }
+
+  int i;
+  for(i = 0; i < token_cnt-1; i++)
+  {
+    struct dir * next = find_dir(d, tokens[i]);
+
+
+    if(next == NULL) {
+      ASSERT(0);
+      dir_close(d);
+      return NULL;
+    }
+    dir_close(d);
+    d = next;
+  }
+  *file_name = malloc(strlen(tokens[token_cnt-1])+1);
+  strlcpy(*file_name, tokens[token_cnt-1], strlen(tokens[token_cnt-1])+1);
+// *file_name = tokens[token_cnt-1];
+
+  return d;
+
 }

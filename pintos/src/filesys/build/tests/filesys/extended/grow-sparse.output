@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/grow-sparse into /tmp/aV6xRvMxpb.dsk...
-Copying tests/filesys/extended/tar into /tmp/aV6xRvMxpb.dsk...
-Writing command line to /tmp/TB6HL0WlqB.dsk...
-qemu -hda /tmp/TB6HL0WlqB.dsk -hdb tmp.dsk -hdc /tmp/aV6xRvMxpb.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/grow-sparse into /tmp/yOw7t4VwVD.dsk...
-Copying tests/filesys/extended/tar into /tmp/yOw7t4VwVD.dsk...
-Writing command line to /tmp/cuFEQQ3ETr.dsk...
-qemu -hda /tmp/cuFEQQ3ETr.dsk -hdb tmp.dsk -hdc /tmp/yOw7t4VwVD.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/grow-sparse into /tmp/POSD9ZQ0xb.dsk...
+Copying tests/filesys/extended/tar into /tmp/POSD9ZQ0xb.dsk...
+Writing command line to /tmp/ZHUu70oC53.dsk...
+qemu -hda /tmp/ZHUu70oC53.dsk -hdb tmp.dsk -hdc /tmp/POSD9ZQ0xb.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-sparse put tar run grow-sparse
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
+372 pages available in user pool.
 Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 159 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -28,30 +21,19 @@ Executing 'grow-sparse':
 (grow-sparse) open "testfile"
 (grow-sparse) seek "testfile"
 (grow-sparse) write "testfile"
-<<<<<<< HEAD
-Kernel PANIC at ../../filesys/inode.c:495 in inode_write_at(): assertion `0' failed.
-Call stack: 0xc0107276 0xc010d2a1 0xc010c0a6 0xc010b46e 0xc010b06e 0xc0101745 0xc010191b 0x804a2a9 0x804815b 0x80488cb 0x80488f8.
-The `backtrace' program can make call stacks useful.
-Read "Backtraces" in the "Debugging Tools" chapter
-of the Pintos documentation for more information.
-Kernel PANIC recursion at ../../devices/timer.c:187 in real_time_sleep().
-Timer: 69 ticks
-Thread: 0 idle ticks, 64 kernel ticks, 5 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 200 reads, 523 writes
-hd1:0: 159 reads, 0 writes
-Console: 1356 characters output
-=======
-(grow-sparse) write "testfile": FAILED
-grow-sparse: exit(1)
+(grow-sparse) close "testfile"
+(grow-sparse) open "testfile" for verification
+(grow-sparse) verified contents of "testfile"
+(grow-sparse) close "testfile"
+(grow-sparse) end
+grow-sparse: exit(0)
 Execution of 'grow-sparse' complete.
-Timer: 69 ticks
-Thread: 0 idle ticks, 67 kernel ticks, 2 user ticks
+Timer: 90 ticks
+Thread: 0 idle ticks, 67 kernel ticks, 23 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 200 reads, 286 writes
+hd0:1: 403 reads, 1079 writes
 hd1:0: 159 reads, 0 writes
-Console: 1010 characters output
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Console: 1146 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

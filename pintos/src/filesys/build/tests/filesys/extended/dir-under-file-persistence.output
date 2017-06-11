@@ -1,52 +1,26 @@
-<<<<<<< HEAD
-Writing command line to /tmp/K73y1jqTua.dsk...
-qemu -hda /tmp/K73y1jqTua.dsk -hdb tmp.dsk -hdc /tmp/WGb8ytpIau.dsk -m 4 -net none -nographic -monitor null
-=======
-Writing command line to /tmp/avZ3FyUkrV.dsk...
-qemu -hda /tmp/avZ3FyUkrV.dsk -hdb tmp.dsk -hdc /tmp/8bM3Uhl13Y.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Writing command line to /tmp/Hh4mBGaxgT.dsk...
+qemu -hda /tmp/Hh4mBGaxgT.dsk -hdb tmp.dsk -hdc /tmp/Xy4y6PfPJs.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q run 'tar fs.tar /' get fs.tar
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,438,400 loops/s.
-=======
-Calibrating timer...  75,264,000 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  75,059,200 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 2,048 sector (1024 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Boot complete.
 Executing 'tar fs.tar /':
 /: open failed
-<<<<<<< HEAD
 tar: exit(1)
 Execution of 'tar fs.tar /' complete.
 Getting 'fs.tar' from the file system...
-Timer: 58 ticks
-Thread: 0 idle ticks, 54 kernel ticks, 4 user ticks
+Timer: 61 ticks
+Thread: 0 idle ticks, 60 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 40 reads, 42 writes
+hd0:1: 35 reads, 66 writes
 hd1:0: 0 reads, 3 writes
 Console: 743 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...
-Copying tests/filesys/extended/dir-under-file.tar out of /tmp/WGb8ytpIau.dsk...
-=======
-error writing archive
-tar: exit(1)
-Execution of 'tar fs.tar /' complete.
-Getting 'fs.tar' from the file system...
-Timer: 56 ticks
-Thread: 0 idle ticks, 55 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 38 reads, 1 writes
-hd1:0: 0 reads, 1 writes
-Console: 764 characters output
-Keyboard: 0 keys pressed
-Exception: 0 page faults
-Powering off...
-Copying tests/filesys/extended/dir-under-file.tar out of /tmp/8bM3Uhl13Y.dsk...
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/dir-under-file.tar out of /tmp/Xy4y6PfPJs.dsk...

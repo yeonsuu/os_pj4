@@ -1,18 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/open-missing into /tmp/YkBnOcKLoE.dsk...
-Writing command line to /tmp/mzc4cU5OtU.dsk...
-qemu -hda /tmp/mzc4cU5OtU.dsk -hdb /tmp/7diN4jf7kM.dsk -hdc /tmp/YkBnOcKLoE.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/open-missing into /tmp/ldO8kSBgxi.dsk...
-Writing command line to /tmp/Qe4grAy3Yg.dsk...
-qemu -hda /tmp/Qe4grAy3Yg.dsk -hdb /tmp/XNuWH06n0A.dsk -hdc /tmp/ldO8kSBgxi.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/open-missing into /tmp/2KGV9twmV5.dsk...
+Writing command line to /tmp/nm7wAT0Suo.dsk...
+qemu -hda /tmp/nm7wAT0Suo.dsk -hdb /tmp/4GlFJ2rOfN.dsk -hdc /tmp/2KGV9twmV5.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put open-missing run open-missing
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  75,059,200 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -24,17 +18,10 @@ Executing 'open-missing':
 (open-missing) end
 open-missing: exit(0)
 Execution of 'open-missing' complete.
-<<<<<<< HEAD
-Timer: 62 ticks
-Thread: 0 idle ticks, 61 kernel ticks, 1 user ticks
+Timer: 68 ticks
+Thread: 0 idle ticks, 67 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 106 reads, 243 writes
-=======
-Timer: 57 ticks
-Thread: 0 idle ticks, 56 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 106 reads, 110 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 103 reads, 303 writes
 hd1:0: 73 reads, 0 writes
 Console: 826 characters output
 Keyboard: 0 keys pressed

@@ -1,0 +1,37 @@
+Copying tests/filesys/base/sm-seq-random into /tmp/w5woQ5Rb6D.dsk...
+Writing command line to /tmp/8tLMQJSIZ9.dsk...
+qemu -hda /tmp/8tLMQJSIZ9.dsk -hdb /tmp/vK3fc6eg7p.dsk -hdc /tmp/w5woQ5Rb6D.dsk -hdd /tmp/9FSZjLqLLc.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put sm-seq-random run sm-seq-random
+Pintos booting with 4,096 kB RAM...
+373 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  78,540,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 76 sector (38 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+hd1:1: detected 8,064 sector (3 MB) disk, model "QEMU HARDDISK", serial "QM00004"
+Formatting file system...done.
+Boot complete.
+Putting 'sm-seq-random' into the file system...
+Executing 'sm-seq-random':
+(sm-seq-random) begin
+(sm-seq-random) create "nibble"
+(sm-seq-random) open "nibble"
+(sm-seq-random) writing "nibble"
+(sm-seq-random) close "nibble"
+(sm-seq-random) open "nibble" for verification
+(sm-seq-random) verified contents of "nibble"
+(sm-seq-random) close "nibble"
+(sm-seq-random) end
+sm-seq-random: exit(0)
+Execution of 'sm-seq-random' complete.
+Timer: 62 ticks
+Thread: 0 idle ticks, 58 kernel ticks, 4 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 140 reads, 196 writes
+hd1:0: 76 reads, 0 writes
+hd1:1: 0 reads, 0 writes
+Console: 1184 characters output
+Keyboard: 0 keys pressed
+Exception: 6 page faults
+Powering off...

@@ -41,7 +41,9 @@ process_init (void)
   initial_process -> is_dead = false;
   initial_process -> load_success = false;
   initial_process -> fd_cnt = 2;
+  //initial_process -> curr_dir = dir_open_root();
   list_init(&initial_process -> file_list);
+  list_init(&initial_process -> dir_list);
   list_init(&initial_process -> children_pids);
 
   //printf("MALLOC struct process / process pid : %d ", thread_current() -> tid);
@@ -100,7 +102,10 @@ process_execute (const char *file_name)
     child->is_dead = false;
     child->load_success = false;
     list_init(&child->file_list);
+    list_init(&child->dir_list);
+
     child->fd_cnt = 2;
+    child->curr_dir = curr_p->curr_dir;
     
     list_push_back(&process_list, &child->elem);
 
@@ -488,7 +493,7 @@ load (const char *file_name, void (**eip) (void), void **esp)
   /* Open executable file. */
   //old_level = intr_disable();
   file = filesys_open (file_name);   //critical section
-
+  
   //intr_set_level(old_level);
   if (file == NULL) 
     {

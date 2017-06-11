@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/userprog/open-boundary into /tmp/Yv8fJ5Cx1u.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/Yv8fJ5Cx1u.dsk...
-Writing command line to /tmp/eIwrTsseKV.dsk...
-qemu -hda /tmp/eIwrTsseKV.dsk -hdb /tmp/ScbtF1ntJs.dsk -hdc /tmp/Yv8fJ5Cx1u.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/open-boundary into /tmp/brF9E94orN.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/brF9E94orN.dsk...
-Writing command line to /tmp/F5SI1fUbZE.dsk...
-qemu -hda /tmp/F5SI1fUbZE.dsk -hdb /tmp/40lgVUZjv0.dsk -hdc /tmp/brF9E94orN.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/open-boundary into /tmp/uDIiZvMHDk.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/uDIiZvMHDk.dsk...
+Writing command line to /tmp/EFCceSuOqk.dsk...
+qemu -hda /tmp/EFCceSuOqk.dsk -hdb /tmp/7x7o2EUkb7.dsk -hdc /tmp/uDIiZvMHDk.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put open-boundary put sample.txt run open-boundary
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  71,884,800 loops/s.
-=======
-Calibrating timer...  63,795,200 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  50,636,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 77 sector (38 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -32,17 +21,10 @@ Executing 'open-boundary':
 (open-boundary) end
 open-boundary: exit(0)
 Execution of 'open-boundary' complete.
-<<<<<<< HEAD
-Timer: 66 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
+Timer: 64 ticks
+Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 114 reads, 253 writes
-=======
-Timer: 61 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 2 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 114 reads, 118 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 109 reads, 311 writes
 hd1:0: 77 reads, 0 writes
 Console: 928 characters output
 Keyboard: 0 keys pressed

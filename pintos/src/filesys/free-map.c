@@ -34,14 +34,10 @@ free_map_allocate (size_t cnt, disk_sector_t *sectorp)
       bitmap_set_multiple (free_map, sector, cnt, false); 
       sector = BITMAP_ERROR;
     }
-<<<<<<< HEAD
   if (sector != BITMAP_ERROR){
       *sectorp = sector;
+      //printf("free map sector : %d\n", sector);
     }
-=======
-  if (sector != BITMAP_ERROR)
-    *sectorp = sector;
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
   return sector != BITMAP_ERROR;
 }
 

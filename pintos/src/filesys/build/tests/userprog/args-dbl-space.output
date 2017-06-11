@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/args-dbl-space into /tmp/rFzlt12RQ8.dsk...
-Writing command line to /tmp/SheDjGq9ZJ.dsk...
-qemu -hda /tmp/SheDjGq9ZJ.dsk -hdb /tmp/bonLUZ7Epg.dsk -hdc /tmp/rFzlt12RQ8.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/args-dbl-space into /tmp/PrCvKJWE18.dsk...
-Writing command line to /tmp/H3q0LGotLM.dsk...
-qemu -hda /tmp/H3q0LGotLM.dsk -hdb /tmp/hryeNmblrQ.dsk -hdc /tmp/PrCvKJWE18.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/args-dbl-space into /tmp/9jlCB0UG1r.dsk...
+Writing command line to /tmp/FXnDEdwBSK.dsk...
+qemu -hda /tmp/FXnDEdwBSK.dsk -hdb /tmp/F49nSJIDaZ.dsk -hdc /tmp/9jlCB0UG1r.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put args-dbl-space run 'args-dbl-space two  spaces!'
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  26,188,800 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,275,200 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 72 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -33,17 +23,10 @@ Executing 'args-dbl-space two  spaces!':
 (args) end
 args-dbl-space: exit(0)
 Execution of 'args-dbl-space two  spaces!' complete.
-<<<<<<< HEAD
-Timer: 61 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 2 user ticks
+Timer: 63 ticks
+Thread: 0 idle ticks, 61 kernel ticks, 2 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 240 writes
-=======
-Timer: 57 ticks
-Thread: 0 idle ticks, 55 kernel ticks, 2 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 108 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 102 reads, 301 writes
 hd1:0: 72 reads, 0 writes
 Console: 985 characters output
 Keyboard: 0 keys pressed

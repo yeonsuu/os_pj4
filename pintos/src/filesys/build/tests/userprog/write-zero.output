@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-Copying tests/userprog/write-zero into /tmp/0NBFoRAeyj.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/0NBFoRAeyj.dsk...
-Writing command line to /tmp/OjfqcMZaFA.dsk...
-qemu -hda /tmp/OjfqcMZaFA.dsk -hdb /tmp/ROBeUvGTU3.dsk -hdc /tmp/0NBFoRAeyj.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/write-zero into /tmp/DR7ZNA8piI.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/DR7ZNA8piI.dsk...
-Writing command line to /tmp/UI9bY4Qyzj.dsk...
-qemu -hda /tmp/UI9bY4Qyzj.dsk -hdb /tmp/hBPc4pNJaD.dsk -hdc /tmp/DR7ZNA8piI.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/write-zero into /tmp/xRDhvmq6Ww.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/xRDhvmq6Ww.dsk...
+Writing command line to /tmp/x48cWZD0q8.dsk...
+qemu -hda /tmp/x48cWZD0q8.dsk -hdb /tmp/fUiBa7TdtY.dsk -hdc /tmp/xRDhvmq6Ww.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put write-zero put sample.txt run write-zero
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  50,636,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 75 sector (37 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -28,17 +21,10 @@ Executing 'write-zero':
 (write-zero) end
 write-zero: exit(0)
 Execution of 'write-zero' complete.
-<<<<<<< HEAD
-Timer: 64 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
+Timer: 65 ticks
+Thread: 0 idle ticks, 64 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 112 reads, 249 writes
-=======
-Timer: 58 ticks
-Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 112 reads, 114 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 107 reads, 307 writes
 hd1:0: 75 reads, 0 writes
 Console: 901 characters output
 Keyboard: 0 keys pressed

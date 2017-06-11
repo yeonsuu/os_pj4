@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/halt into /tmp/FSzKsbnBdW.dsk...
-Writing command line to /tmp/UuOzl95nsw.dsk...
-qemu -hda /tmp/UuOzl95nsw.dsk -hdb /tmp/wdbHPvmtU9.dsk -hdc /tmp/FSzKsbnBdW.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/halt into /tmp/RQN4WgyciT.dsk...
-Writing command line to /tmp/It8fNsi1yO.dsk...
-qemu -hda /tmp/It8fNsi1yO.dsk -hdb /tmp/l7HTmsLt0u.dsk -hdc /tmp/RQN4WgyciT.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/halt into /tmp/gul7Fv030p.dsk...
+Writing command line to /tmp/gHATY35Jma.dsk...
+qemu -hda /tmp/gHATY35Jma.dsk -hdb /tmp/tmVnQjNoP0.dsk -hdc /tmp/gul7Fv030p.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put halt run halt
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  65,024,000 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,326,400 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -25,17 +15,10 @@ Boot complete.
 Putting 'halt' into the file system...
 Executing 'halt':
 (halt) begin
-<<<<<<< HEAD
-Timer: 60 ticks
-Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
+Timer: 59 ticks
+Thread: 0 idle ticks, 57 kernel ticks, 3 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 178 writes
-=======
-Timer: 64 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 104 reads, 109 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 102 reads, 239 writes
 hd1:0: 73 reads, 0 writes
 Console: 707 characters output
 Keyboard: 0 keys pressed

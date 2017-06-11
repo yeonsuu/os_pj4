@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/grow-root-lg into /tmp/U4sgVDeIcT.dsk...
-Copying tests/filesys/extended/tar into /tmp/U4sgVDeIcT.dsk...
-Writing command line to /tmp/aQfVDE96ub.dsk...
-qemu -hda /tmp/aQfVDE96ub.dsk -hdb tmp.dsk -hdc /tmp/U4sgVDeIcT.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/grow-root-lg into /tmp/UIPqwpIjhm.dsk...
-Copying tests/filesys/extended/tar into /tmp/UIPqwpIjhm.dsk...
-Writing command line to /tmp/gHyFMkPrIO.dsk...
-qemu -hda /tmp/gHyFMkPrIO.dsk -hdb tmp.dsk -hdc /tmp/UIPqwpIjhm.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/grow-root-lg into /tmp/Q2icFL2C4s.dsk...
+Copying tests/filesys/extended/tar into /tmp/Q2icFL2C4s.dsk...
+Writing command line to /tmp/032lJlabaw.dsk...
+qemu -hda /tmp/032lJlabaw.dsk -hdb tmp.dsk -hdc /tmp/Q2icFL2C4s.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-root-lg put tar run grow-root-lg
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  65,228,800 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  49,100,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -43,7 +32,6 @@ Executing 'grow-root-lg':
 (grow-root-lg) creating and checking "file12"
 (grow-root-lg) creating and checking "file13"
 (grow-root-lg) creating and checking "file14"
-<<<<<<< HEAD
 (grow-root-lg) creating and checking "file15"
 (grow-root-lg) creating and checking "file16"
 (grow-root-lg) creating and checking "file17"
@@ -82,23 +70,12 @@ Executing 'grow-root-lg':
 (grow-root-lg) end
 grow-root-lg: exit(0)
 Execution of 'grow-root-lg' complete.
-Timer: 95 ticks
-Thread: 0 idle ticks, 68 kernel ticks, 27 user ticks
+Timer: 88 ticks
+Thread: 0 idle ticks, 67 kernel ticks, 21 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 501 reads, 958 writes
+hd0:1: 347 reads, 783 writes
 hd1:0: 160 reads, 0 writes
 Console: 3165 characters output
-=======
-(grow-root-lg) create "file14": FAILED
-grow-root-lg: exit(1)
-Execution of 'grow-root-lg' complete.
-Timer: 75 ticks
-Thread: 0 idle ticks, 70 kernel ticks, 5 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 283 reads, 331 writes
-hd1:0: 160 reads, 0 writes
-Console: 1574 characters output
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

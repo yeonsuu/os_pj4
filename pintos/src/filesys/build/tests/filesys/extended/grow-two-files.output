@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/grow-two-files into /tmp/rwARrIZvzN.dsk...
-Copying tests/filesys/extended/tar into /tmp/rwARrIZvzN.dsk...
-Writing command line to /tmp/iJybnpKto2.dsk...
-qemu -hda /tmp/iJybnpKto2.dsk -hdb tmp.dsk -hdc /tmp/rwARrIZvzN.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/grow-two-files into /tmp/Tvapx91vxq.dsk...
-Copying tests/filesys/extended/tar into /tmp/Tvapx91vxq.dsk...
-Writing command line to /tmp/tbuXoVzZiq.dsk...
-qemu -hda /tmp/tbuXoVzZiq.dsk -hdb tmp.dsk -hdc /tmp/Tvapx91vxq.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/grow-two-files into /tmp/czmdV0P2KR.dsk...
+Copying tests/filesys/extended/tar into /tmp/czmdV0P2KR.dsk...
+Writing command line to /tmp/IPcSG4rdiX.dsk...
+qemu -hda /tmp/IPcSG4rdiX.dsk -hdb tmp.dsk -hdc /tmp/czmdV0P2KR.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-two-files put tar run grow-two-files
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  65,433,600 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,377,600 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 161 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -33,7 +22,6 @@ Executing 'grow-two-files':
 (grow-two-files) open "a"
 (grow-two-files) open "b"
 (grow-two-files) write "a" and "b" alternately
-<<<<<<< HEAD
 (grow-two-files) close "a"
 (grow-two-files) close "b"
 (grow-two-files) open "a" for verification
@@ -48,20 +36,9 @@ Execution of 'grow-two-files' complete.
 Timer: 74 ticks
 Thread: 0 idle ticks, 66 kernel ticks, 8 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 242 reads, 621 writes
+hd0:1: 232 reads, 674 writes
 hd1:0: 161 reads, 0 writes
 Console: 1323 characters output
-=======
-(grow-two-files) write 250 bytes at offset 0 in "a" returned 0: FAILED
-grow-two-files: exit(1)
-Execution of 'grow-two-files' complete.
-Timer: 67 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 2 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 206 reads, 292 writes
-hd1:0: 161 reads, 0 writes
-Console: 1095 characters output
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

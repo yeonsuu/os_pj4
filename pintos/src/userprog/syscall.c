@@ -1,5 +1,6 @@
 #include "userprog/syscall.h"
 #include <stdio.h>
+#include <strihg.h>
 #include <syscall-nr.h>
 #include "threads/interrupt.h"
 #include "threads/thread.h"
@@ -10,6 +11,7 @@
 #include "filesys/filesys.h"
 #include "userprog/pagedir.h"
 #include "filesys/file.h"
+#include "filesys/directory.h"
 #include "devices/input.h"
 
 static void syscall_handler (struct intr_frame *);
@@ -97,17 +99,17 @@ syscall_handler (struct intr_frame *f)
     	sys_close((int)*argv[0]);
     	break;
 
-      /*
+    
     case SYS_CHDIR :
       syscall_arguments(argv, sp, 1);
-      f->eax = sys_chidr((const char *)*argv[0]);
+      f->eax = sys_chdir((const char *)*argv[0]);
       break;
 
     case SYS_MKDIR :
       syscall_arguments(argv, sp, 1);
       f->eax = sys_mkdir((const char *)*argv[0]);
       break;
-
+/*
     case SYS_READDIR :
       syscall_arguments(argv, sp, 2);
       f->eax = sys_readdir((int)*argv[0], (char name[READDIR_MAK_LEN +1])(uint32_t *)*argv[1]);
@@ -174,6 +176,8 @@ sys_create(const char *file, unsigned initial_size)
     sys_exit(-1);
   if(!is_valid_usraddr((void *)file))
     sys_exit(-1);  
+
+
   return filesys_create(file, initial_size);
 }
 
@@ -198,6 +202,13 @@ sys_open(const char *file)
   struct file * f;
   struct process * p;
   p = find_process(thread_current()->tid);
+
+  if (find_dirname(file) != NULL){
+    dir_open(file);
+    fd = p->fd_cnt;
+    p->fd_cnt++;
+    return fd;
+  }
 
   f = filesys_open (file);
 
@@ -371,19 +382,74 @@ sys_close(int fd)
 }
 
 
+
+bool
+sys_chdir (const char *dir_name)
+{
+  if(!is_valid_usraddr((void *)dir_name))
+    sys_exit(-1);
+    
+  bool success;
+  struct process * p = find_process(thread_current()->tid);
+
+  struct inode * inode = NULL;
+  char * file_name;
+  file_name = malloc(strlen(dir_name)+1);
+
+
+  ASSERT (p != NULL);
+
+  lock_acquire(&filesys_lock);
+  struct dir *dir = find_path(dir_name, &file_name);
+  success = dir_lookup(dir, file_name, &inode);
+  
+  if(dir == NULL){
+    lock_release(&filesys_lock);
+    return false;
+  }
+  dir_close(p->curr_dir);
+  p->curr_dir = dir_open(inode);
+
+  
+
+  lock_release(&filesys_lock);
+  return success;
+}
+
+
+
+
+bool
+sys_mkdir (const char *dir_name)
+{
+  if(dir_name == "")
+    return false;
+  
+  if(!is_valid_usraddr((void *)dir_name))
+    sys_exit(-1);
+    
+
+  bool success;
+  disk_sector_t dir_sector;
+  struct process * p;
+  p = find_process(thread_current()->tid);
+  if(!is_valid_usraddr((void *)dir_name))
+    sys_exit(-1);
+
+  lock_acquire(&filesys_lock);
+  success = filesys_create(dir_name, 0);
+  lock_release(&filesys_lock);
+
+  struct dir_elem * de;
+  de = malloc(sizeof *de);
+
+  de->dir_name = dir_name;
+
+  list_push_back(&p->dir_list, &de->elem);
+
+  return success;
+}
 /*
-bool
-sys_chdir (const char *dir)
-{
-  return syscall1 (SYS_CHDIR, dir);
-}
-
-bool
-sys_mkdir (const char *dir)
-{
-  return syscall1 (SYS_MKDIR, dir);
-}
-
 bool
 sys_readdir (int fd, char name[READDIR_MAX_LEN + 1]) 
 {
@@ -403,3 +469,38 @@ sys_inumber (int fd)
 }
 
 */
+
+struct dir *
+find_dir(struct dir * base_dir, char * dir_name)
+{
+  struct inode * inode;
+  
+  if (!dir_lookup (base_dir, dir_name, &inode)){
+    return NULL;
+  }
+  struct dir * dir = dir_open(inode);
+      
+  if (dir == NULL){
+    ASSERT(0);
+
+    return NULL;
+  }
+  return dir;
+}
+
+
+struct dir_elem *
+find_dirname(char * dir_name){
+  struct dir_elem * de;
+  struct process * p;
+  p = find_process(thread_current()->tid);
+  struct list_elem *e;
+  for(e = list_begin(&p->dir_list); e!= list_end(&p->dir_list); e = list_next(e)){
+    de = list_entry(e, struct dir_elem, elem);
+    if (strcmp(de->dir_name, dir_name) == 0){
+      return de;
+    }
+  }
+  return NULL;
+}
+

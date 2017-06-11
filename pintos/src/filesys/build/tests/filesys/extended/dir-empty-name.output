@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/dir-empty-name into /tmp/YR27B8tkWL.dsk...
-Copying tests/filesys/extended/tar into /tmp/YR27B8tkWL.dsk...
-Writing command line to /tmp/t23QTrzKAn.dsk...
-qemu -hda /tmp/t23QTrzKAn.dsk -hdb tmp.dsk -hdc /tmp/YR27B8tkWL.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/dir-empty-name into /tmp/lPAfUFeghO.dsk...
-Copying tests/filesys/extended/tar into /tmp/lPAfUFeghO.dsk...
-Writing command line to /tmp/v9EbXHgQcE.dsk...
-qemu -hda /tmp/v9EbXHgQcE.dsk -hdb tmp.dsk -hdc /tmp/lPAfUFeghO.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/dir-empty-name into /tmp/k6AmNTK0U5.dsk...
+Copying tests/filesys/extended/tar into /tmp/k6AmNTK0U5.dsk...
+Writing command line to /tmp/JsfuVXmlAf.dsk...
+qemu -hda /tmp/JsfuVXmlAf.dsk -hdb tmp.dsk -hdc /tmp/k6AmNTK0U5.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-empty-name put tar run dir-empty-name
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  49,100,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 158 sector (79 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -25,22 +18,15 @@ Putting 'tar' into the file system...
 Executing 'dir-empty-name':
 (dir-empty-name) begin
 (dir-empty-name) mkdir "" (must return false)
-(dir-empty-name) mkdir "" (must return false): FAILED
-dir-empty-name: exit(1)
+(dir-empty-name) end
+dir-empty-name: exit(0)
 Execution of 'dir-empty-name' complete.
-<<<<<<< HEAD
-Timer: 66 ticks
-Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
+Timer: 68 ticks
+Thread: 0 idle ticks, 67 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 194 reads, 438 writes
-=======
-Timer: 63 ticks
-Thread: 0 idle ticks, 62 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 194 reads, 281 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 191 reads, 500 writes
 hd1:0: 158 reads, 0 writes
-Console: 969 characters output
+Console: 936 characters output
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

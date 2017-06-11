@@ -13,6 +13,12 @@ struct fd_file
 	struct list_elem elem;
 };
 
+struct dir_elem
+{
+	char * dir_name;
+	struct list_elem elem;
+};
+
 /* process의 childeren_pids에 저장해 주기 위한 struct 
 이 역시 load success한 child만 저장 */
 struct childpid_elem
@@ -39,6 +45,9 @@ struct process
 	int fd_cnt;
 	struct file * exec_file;		/* 이 process의 exec file를 process가 exit 할 때 free 해주기 위해서 */
 	struct list file_list;			/* 이 process가 open 한 file_list */
+
+	struct dir * curr_dir;		/* 이 process의 current dir */
+	struct list dir_list;
 
 	struct list_elem elem;
 };

@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/grow-dir-lg into /tmp/k4W0QuYUXL.dsk...
-Copying tests/filesys/extended/tar into /tmp/k4W0QuYUXL.dsk...
-Writing command line to /tmp/hlJ7MSVz0y.dsk...
-qemu -hda /tmp/hlJ7MSVz0y.dsk -hdb tmp.dsk -hdc /tmp/k4W0QuYUXL.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/grow-dir-lg into /tmp/1spNDinR1z.dsk...
-Copying tests/filesys/extended/tar into /tmp/1spNDinR1z.dsk...
-Writing command line to /tmp/HepkHofEWs.dsk...
-qemu -hda /tmp/HepkHofEWs.dsk -hdb tmp.dsk -hdc /tmp/1spNDinR1z.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/grow-dir-lg into /tmp/5YqTzhazXD.dsk...
+Copying tests/filesys/extended/tar into /tmp/5YqTzhazXD.dsk...
+Writing command line to /tmp/dp2ZpLIxmg.dsk...
+qemu -hda /tmp/dp2ZpLIxmg.dsk -hdb tmp.dsk -hdc /tmp/5YqTzhazXD.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put grow-dir-lg put tar run grow-dir-lg
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  76,697,600 loops/s.
-=======
-Calibrating timer...  78,438,400 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  75,059,200 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 160 sector (80 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -44,7 +33,6 @@ Executing 'grow-dir-lg':
 (grow-dir-lg) creating and checking "/x/file12"
 (grow-dir-lg) creating and checking "/x/file13"
 (grow-dir-lg) creating and checking "/x/file14"
-<<<<<<< HEAD
 (grow-dir-lg) creating and checking "/x/file15"
 (grow-dir-lg) creating and checking "/x/file16"
 (grow-dir-lg) creating and checking "/x/file17"
@@ -83,23 +71,12 @@ Executing 'grow-dir-lg':
 (grow-dir-lg) end
 grow-dir-lg: exit(0)
 Execution of 'grow-dir-lg' complete.
-Timer: 95 ticks
-Thread: 0 idle ticks, 70 kernel ticks, 26 user ticks
+Timer: 98 ticks
+Thread: 0 idle ticks, 75 kernel ticks, 23 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 501 reads, 958 writes
+hd0:1: 349 reads, 799 writes
 hd1:0: 160 reads, 0 writes
 Console: 3280 characters output
-=======
-(grow-dir-lg) create "/x/file14": FAILED
-grow-dir-lg: exit(1)
-Execution of 'grow-dir-lg' complete.
-Timer: 68 ticks
-Thread: 0 idle ticks, 64 kernel ticks, 5 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 283 reads, 331 writes
-hd1:0: 160 reads, 0 writes
-Console: 1622 characters output
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
 Keyboard: 0 keys pressed
 Exception: 0 page faults
 Powering off...

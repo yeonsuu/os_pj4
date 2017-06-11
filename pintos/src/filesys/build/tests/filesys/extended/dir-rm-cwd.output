@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-Copying tests/filesys/extended/dir-rm-cwd into /tmp/d5QKVTieCq.dsk...
-Copying tests/filesys/extended/tar into /tmp/d5QKVTieCq.dsk...
-Writing command line to /tmp/eEQRboBs5I.dsk...
-qemu -hda /tmp/eEQRboBs5I.dsk -hdb tmp.dsk -hdc /tmp/d5QKVTieCq.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/filesys/extended/dir-rm-cwd into /tmp/THkGdwzh2K.dsk...
-Copying tests/filesys/extended/tar into /tmp/THkGdwzh2K.dsk...
-Writing command line to /tmp/RY2EVgwef2.dsk...
-qemu -hda /tmp/RY2EVgwef2.dsk -hdb tmp.dsk -hdc /tmp/THkGdwzh2K.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/filesys/extended/dir-rm-cwd into /tmp/jtkk3HgVyl.dsk...
+Copying tests/filesys/extended/tar into /tmp/jtkk3HgVyl.dsk...
+Writing command line to /tmp/H6VETn6vBd.dsk...
+qemu -hda /tmp/H6VETn6vBd.dsk -hdb tmp.dsk -hdc /tmp/jtkk3HgVyl.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put dir-rm-cwd put tar run dir-rm-cwd
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  65,126,400 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  52,377,600 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 163 sector (81 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -32,17 +21,10 @@ Executing 'dir-rm-cwd':
 (dir-rm-cwd) open "/": FAILED
 dir-rm-cwd: exit(1)
 Execution of 'dir-rm-cwd' complete.
-<<<<<<< HEAD
 Timer: 67 ticks
 Thread: 0 idle ticks, 66 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 203 reads, 455 writes
-=======
-Timer: 69 ticks
-Thread: 0 idle ticks, 68 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 203 reads, 294 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 198 reads, 513 writes
 hd1:0: 163 reads, 0 writes
 Console: 893 characters output
 Keyboard: 0 keys pressed

@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-Copying tests/userprog/open-bad-ptr into /tmp/z3dnQCsZT0.dsk...
-Writing command line to /tmp/XmbLbEJBy4.dsk...
-qemu -hda /tmp/XmbLbEJBy4.dsk -hdb /tmp/wTz3Z5VbjF.dsk -hdc /tmp/z3dnQCsZT0.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/open-bad-ptr into /tmp/8DG1QvwVgP.dsk...
-Writing command line to /tmp/tI5HmbEsEY.dsk...
-qemu -hda /tmp/tI5HmbEsEY.dsk -hdb /tmp/1TvemwIiP2.dsk -hdc /tmp/8DG1QvwVgP.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/open-bad-ptr into /tmp/Q90eNUIJCE.dsk...
+Writing command line to /tmp/uM0L1jRwS5.dsk...
+qemu -hda /tmp/uM0L1jRwS5.dsk -hdb /tmp/rxKwomCyFf.dsk -hdc /tmp/Q90eNUIJCE.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put open-bad-ptr run open-bad-ptr
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-<<<<<<< HEAD
-Calibrating timer...  78,540,800 loops/s.
-=======
-Calibrating timer...  76,902,400 loops/s.
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  50,636,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -27,16 +17,10 @@ Executing 'open-bad-ptr':
 (open-bad-ptr) begin
 open-bad-ptr: exit(-1)
 Execution of 'open-bad-ptr' complete.
-Timer: 60 ticks
-<<<<<<< HEAD
-Thread: 0 idle ticks, 58 kernel ticks, 2 user ticks
+Timer: 65 ticks
+Thread: 0 idle ticks, 65 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 105 reads, 242 writes
-=======
-Thread: 0 idle ticks, 59 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 105 reads, 110 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 103 reads, 303 writes
 hd1:0: 73 reads, 0 writes
 Console: 808 characters output
 Keyboard: 0 keys pressed

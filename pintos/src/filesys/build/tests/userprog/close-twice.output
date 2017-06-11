@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-Copying tests/userprog/close-twice into /tmp/QzZdHJOhdr.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/QzZdHJOhdr.dsk...
-Writing command line to /tmp/ouDuJwvhLd.dsk...
-qemu -hda /tmp/ouDuJwvhLd.dsk -hdb /tmp/oeZsTSqd3t.dsk -hdc /tmp/QzZdHJOhdr.dsk -m 4 -net none -nographic -monitor null
-=======
-Copying tests/userprog/close-twice into /tmp/H57fU1zGrl.dsk...
-Copying ../../tests/userprog/sample.txt into /tmp/H57fU1zGrl.dsk...
-Writing command line to /tmp/4xQQRYwIzM.dsk...
-qemu -hda /tmp/4xQQRYwIzM.dsk -hdb /tmp/mc13mdU82B.dsk -hdc /tmp/H57fU1zGrl.dsk -m 4 -net none -nographic -monitor null
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+Copying tests/userprog/close-twice into /tmp/x0qUgVO0lU.dsk...
+Copying ../../tests/userprog/sample.txt into /tmp/x0qUgVO0lU.dsk...
+Writing command line to /tmp/2EiPOfgCej.dsk...
+qemu -hda /tmp/2EiPOfgCej.dsk -hdb /tmp/vplCBslE49.dsk -hdc /tmp/x0qUgVO0lU.dsk -m 4 -net none -nographic -monitor null
 Kernel command line: -q -f put close-twice put sample.txt run close-twice
 Pintos booting with 4,096 kB RAM...
 373 pages available in kernel pool.
-373 pages available in user pool.
-Calibrating timer...  78,540,800 loops/s.
-hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+372 pages available in user pool.
+Calibrating timer...  50,636,800 loops/s.
+hd0:0: detected 153 sector (76 kB) disk, model "QEMU HARDDISK", serial "QM00001"
 hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
 hd1:0: detected 75 sector (37 kB) disk, model "QEMU HARDDISK", serial "QM00003"
 Formatting file system...create
@@ -29,17 +22,10 @@ Executing 'close-twice':
 (close-twice) close "sample.txt" again
 close-twice: exit(-1)
 Execution of 'close-twice' complete.
-<<<<<<< HEAD
-Timer: 64 ticks
-Thread: 0 idle ticks, 63 kernel ticks, 1 user ticks
+Timer: 65 ticks
+Thread: 0 idle ticks, 64 kernel ticks, 1 user ticks
 hd0:0: 0 reads, 0 writes
-hd0:1: 112 reads, 250 writes
-=======
-Timer: 57 ticks
-Thread: 0 idle ticks, 57 kernel ticks, 1 user ticks
-hd0:0: 0 reads, 0 writes
-hd0:1: 112 reads, 114 writes
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+hd0:1: 107 reads, 308 writes
 hd1:0: 75 reads, 0 writes
 Console: 965 characters output
 Keyboard: 0 keys pressed

@@ -1,6 +1,2 @@
 FAIL
-<<<<<<< HEAD
-run: remove "/0/0/0": FAILED
-=======
-run: create "/0/1/0/2": FAILED
->>>>>>> 8bfb090a4d7031add0f02cb7cc6a27caecdbb7f3
+run: remove "/0/0/0/0": FAILED

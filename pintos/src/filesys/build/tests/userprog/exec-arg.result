@@ -1,1 +1,15 @@
-PASS
+FAIL
+Kernel panic in run: PANIC at ../../userprog/pagedir.c:61 in lookup_page(): assertion `pd != NULL' failed.
+Call stack: 0xc0107276 0xc010a3a1 0xc010a797 0xc010a1e2 0xc010adbe 0xc0101745 0xc010191b 0xc010cbf6 0xc010befc 0xc0109612 0xc0100d3b
+Translation of call stack:
+0xc0107276: debug_panic (.../../lib/kernel/debug.c:34)
+0xc010a3a1: lookup_page (.../../userprog/pagedir.c:64)
+0xc010a797: pagedir_get_page (...../userprog/pagedir.c:133)
+0xc010a1e2: is_valid_usraddr (...../userprog/process.c:816)
+0xc010adbe: page_fault (.../userprog/exception.c:154)
+0xc0101745: intr_handler (..../threads/interrupt.c:361)
+0xc010191b: intr_entry (threads/intr-stubs.S:38)
+0xc010cbf6: find_path (..../filesys/directory.c:262)
+0xc010befc: filesys_open (.../../filesys/filesys.c:105)
+0xc0109612: start_process (...../userprog/process.c:151)
+0xc0100d3b: kernel_thread (..../../threads/thread.c:411)
